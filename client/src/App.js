@@ -1,9 +1,18 @@
 import React, {Component} from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 
 
-const App = () => {
-    console.log("What are we even doing?")
+class App extends Component {
+    constructor(){
+        super()
+    }
+    render(){
+        return (
+            <div className="app-container">
+            
+            </div>
+        )
+    }
 }
 
 

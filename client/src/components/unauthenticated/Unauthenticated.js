@@ -11,9 +11,9 @@ const Unauthenticated = () => {
     return(
         <section className="unauthenticated-container">
             <Switch>
-                <Route path="/welcome/about" component={WelcomeAbout}/>
-                <Route path="/welcome/login" component={Login}/>
-                <Route path="/welcome/signup" component={SignUp}/>
+                <Route exact path="/welcome/about" component={WelcomeAbout}/>
+                <Route exact path="/welcome/login" component={Login}/>
+                <Route exact path="/welcome/signup" component={SignUp}/>
             </Switch>
             <WelcomeFooter/>       
         </section>

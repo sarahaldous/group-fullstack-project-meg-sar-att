@@ -7,7 +7,7 @@ import TempNavBar from "./TempNavBar.js" //delete when real navbar(s) is impleme
 import AdminDashboard from "./components/admin/AdminDashboard.js"
 import Authenticated from "./components/authenticated/Authenticated.js"
 // import LoadingPage from "./components/loading-page/LoadingPage.js"
-import PlaceHolder from "./components/Placeholder.js"
+// import PlaceHolder from "./components/Placeholder.js"
 import Unauthenticated from "./components/unauthenticated/Unauthenticated.js"
 
 class App extends Component {
@@ -26,7 +26,6 @@ class App extends Component {
                     {/* <Route path="/" component={LoadingPage}/> */}
                     <Route path="/welcome" component={Unauthenticated}/>
                     <Route path="/admin" component={AdminDashboard}/>
-                    <Route path="/site/waitforit" component={PlaceHolder}/>
                     <Route path="/site/home" component={Authenticated}/>
                 </Switch>
             </div>

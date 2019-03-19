@@ -23,17 +23,14 @@ const questSchema = new Schema({
     //  Array of player IDs completed per level
     qLNovice: {
         type: String,
-        required: true,
         playerIDs: Schema.Types.ObjectId
     },
     qLJourneyman: {
         type: String,
-        required: true,
         playerIDs: Schema.Types.ObjectId
     },
     qLMaster: {
         type: String,
-        required: true,
         playerIDs: Schema.Types.ObjectId
     }
 })

@@ -1,9 +1,11 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
 //COMPONENTS
 import UserBadgesList from "./UserBadgesList.js"
 import UserCharSheet from "./UserCharSheet.js"
 import UserSocial from "./UserSocial.js"
+import UserQuestLog from "./UserQuestLog.js"
 
 const UserDashboard = () => {
     return (
@@ -14,6 +16,7 @@ const UserDashboard = () => {
             <UserCharSheet/>
             <UserBadgesList/>
             <UserSocial/>
+            <UserQuestLog/>
         </section>
     )
 }

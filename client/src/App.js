@@ -24,8 +24,9 @@ class App extends Component {
                 <TempNavBar/>
                 <Switch>
                     {/* <Route path="/" component={LoadingPage}/> */}
-                    <Route path="/welcome" component={Unauthenticated}/>
+                    <Route path="/welcome/about" component={Unauthenticated}/>
                     <Route path="/admin" component={AdminDashboard}/>
+                    {/* <Route path="/site/waitforit" component={PlaceHolder}/> */}
                     <Route path="/site/home" component={Authenticated}/>
                 </Switch>
             </div>

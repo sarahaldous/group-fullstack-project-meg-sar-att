@@ -14,9 +14,9 @@ const Authenticated = () => {
     return (
         <section className="authenticated-container">
             <Switch>
-                <Route path="/site/home" component={Home}/>
-                <Route path="/site/user" component={UserDashboard}/>
-                <Route path="/site/social" component={Placeholder}/>
+                <Route exact path="/site/home" component={Home}/>
+                <Route exact path="/site/user" component={UserDashboard}/>
+                <Route exact path="/site/social" component={Placeholder}/>
             </Switch>
             <Navbar/>
         </section>

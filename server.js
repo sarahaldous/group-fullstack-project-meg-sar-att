@@ -12,6 +12,12 @@ app.use(morgan('dev'))
 app.use('/adulting', require('./routes/adultingRoutes.js'))
 app.use("/players", require("./routes/playerRoutes.js"))
 app.use("/quests", require("./routes/questRoutes.js"))
+app.use("*", (req, res) =>{
+    res.send("Error 404? \n" +
+        "You failed to hit anything that you intended. Try again.")
+    console.log(req)
+})
+
 
 // DB connect
 mongoose.connect("mongodb://localhost:27017/adultingDB", {useNewUrlParser: true}, () => {

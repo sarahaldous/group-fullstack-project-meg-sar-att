@@ -1,4 +1,5 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
 //COMPONENTS
 import UserBadgesList from "./UserBadgesList.js"
@@ -14,6 +15,10 @@ const UserDashboard = () => {
             <UserCharSheet/>
             <UserBadgesList/>
             <UserSocial/>
+            <Switch>
+                <Route path="" component={}/>
+                <Route path="" component={}/>
+            </Switch>
         </section>
     )
 }

@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* App.js */
+.app-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* LoadingPage.js */
+.loading-container {    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .loading-container > img {
+        height: 75vh;
+    }
+
+
+
+/*---TEMPORARY COMPONENTS-------------------*/
+/* TempNavBar.js */
+.temp-nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(197, 197, 197);
+    padding: 10px;
+}
+/* Placeholder.js */
+.placeholder-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .placeholder-container > img {
+        height: 75vh;
+    }
+
+
+/*---ADMIN SECTION -------------------------*/
+/* AdminDashboard.js */
+.admin-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .admin-dashboard-container > img {
+        height: 75vh;
+    }
+
+
+/*---UNAUTHENTICATED USER SECTION ----------*/
+/* Unauthenticated.js */
+.unauthenticated-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+/* Login.js */
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+/* SignUp.js */
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+/* WelcomeAbout.js */
+.welcome-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* WelcomeFooter.js */
+.welcome-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: rgb(171, 202, 183);
+}
+
+
+/*---AUTHENTICATED USER SECTION ------------*/
+/* Navbar.js */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: rgb(171, 202, 183);
+}
+/* Authenticated.js */
+.authenticated-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* HomeDashboard.js */
+.home-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* UserDashboard.js */
+    /* UserCharSheet.js */
+    /* UserBadgesList.js */
+    /* UserSocial.js */
+/* PersonalFeed.js */

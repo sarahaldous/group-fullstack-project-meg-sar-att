@@ -103,13 +103,18 @@
 /* Navbar.js */
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     padding: 10px;
     margin-top: 15px;
     background-color: rgb(171, 202, 183);
 }
+    .navbar img {
+        height: 5vh;
+        filter: invert(30%);
+        margin: 3px 35px;
+    }
 /* Authenticated.js */
 .authenticated-container {
     display: flex;

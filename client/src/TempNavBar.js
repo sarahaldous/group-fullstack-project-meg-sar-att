@@ -5,7 +5,7 @@ const TempNavBar = () => {
     return (
         <nav className="temp-nav-bar">
             <Link to="/site/home">Home</Link>
-            <Link to="/welcome">Logout</Link>
+            <Link to="/welcome/about">Logout</Link>
             <Link to="/admin">Admin</Link>    
         </nav>
     )

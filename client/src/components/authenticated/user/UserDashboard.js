@@ -16,14 +16,12 @@ const UserDashboard = () => {
             <UserCharSheet/>
             <UserBadgesList/>
             <UserSocial/>
-<<<<<<< HEAD
+
             <Switch>
                 <Route path="" component={}/>
                 <Route path="" component={}/>
             </Switch>
-=======
             <UserQuestLog/>
->>>>>>> 3459b4b49b4960a097066ace65e09276b39ee705
         </section>
     )
 }

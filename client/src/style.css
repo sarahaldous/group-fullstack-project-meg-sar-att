@@ -1,12 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css?family=Philosopher|Quattrocento+Sans');
+/* font-family: 'Quattrocento Sans', sans-serif; */
+/* font-family: 'Philosopher', sans-serif; */
+
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    color: rgb(33, 1, 56);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 
+body {
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+body h1, h2, h3, h4, h5, h6 {
+    font-family: 'Philosopher', sans-serif;
+}
 /* App.js */
 .app-container {
     width: 100vw;
     height: 100vh;
+    /* background-color: rgb(134, 12, 43); */
+    background-color: rgb(253, 253, 194);
+    /* background-color: rgb(186, 212, 187); */
+    
+    text-align: center;
+  
 }
 
 /* LoadingPage.js */
@@ -27,8 +49,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(103, 170, 170);
     padding: 10px;
+    width: 100vw; 
+    
 }
 /* Placeholder.js */
 .placeholder-container {
@@ -95,7 +119,7 @@
     width: 100vw;
     padding: 10px;
     margin-top: 15px;
-    background-color: rgb(171, 202, 183);
+    background-color: rgba(76, 0, 130, 0.966);
 }
 
 
@@ -108,7 +132,14 @@
     width: 100vw;
     padding: 10px;
     margin-top: 15px;
-    background-color: rgb(171, 202, 183);
+    /* background-color: rgb(159, 136, 175); */
+    background-color: rgb(180, 48, 76);
+    /* background-color: rgb(156, 3, 3); */
+    
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(248, 248, 221);
 }
 /* Authenticated.js */
 .authenticated-container {

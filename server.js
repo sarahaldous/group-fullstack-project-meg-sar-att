@@ -10,6 +10,8 @@ app.use(morgan('dev'))
 
 // Routes
 app.use('/adulting', require('./routes/adultingRoutes.js'))
+app.use("/players", require("./routes/playerRoutes.js"))
+app.use("/quests", require("./routes/questRoutes.js"))
 
 // DB connect
 mongoose.connect("mongodb://localhost:27017/adultingDB", {useNewUrlParser: true}, () => {
@@ -24,5 +26,5 @@ app.use((err, req, res, next) => {
 
 // Listen
 app.listen(PORT, () => {
-    console.log("[+] Server is running on port ${PORT}")
+    console.log(`[+] Server is running on port ${PORT}`)
 })

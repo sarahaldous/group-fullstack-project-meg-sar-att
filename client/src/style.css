@@ -137,7 +137,10 @@ body h1, h2, h3, h4, h5, h6 {
     /* background-color: rgb(180, 48, 76); */
     background-color: rgb(156, 3, 3);
     /* background-color: rgb(103, 170, 170); */
-    
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;    
 }
 .navbar a{
     text-decoration: none;
@@ -145,7 +148,7 @@ body h1, h2, h3, h4, h5, h6 {
 }
     .navbar img {
         height: 5vh;
-        filter: invert(30%);
+        filter: invert(82%);
         margin: 3px 35px;
     }
 /* Authenticated.js */
@@ -161,7 +164,45 @@ body h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding-top: 4vh;
 }
+    /* Post.js */
+    .post {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1vh 5vw;
+        padding: 1vh 0vw;
+        border-bottom: solid rgba(0, 0, 0, 0.13) 1px;
+    }
+    .post:nth-child(1) {
+        border-top: solid rgba(0, 0, 0, 0.13) 1px;
+    }
+    .post > img {
+        height: 10vh;
+        width: calc(10vh);
+        padding: 1vh;
+        background-color: rgb(95, 119, 50);
+        border-radius: 20%;
+        filter: invert(90%) drop-shadow(rgba(0, 0, 0, 0.404) 2px 2px 3px);
+        margin-right: 4vw;
+    }
+    .post > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .status-updates {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.5vh;
+        font-size: .8em;
+        line-height: 1.5em;
+        padding: 0vh 2vw;
+    }
 
 /* UserDashboard.js */
     /* UserCharSheet.js */

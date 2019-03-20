@@ -166,6 +166,9 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding-top: 4vh;
 }
+.home-dashboard > h3 {
+    font-weight: 500;
+}
 /* Post.js */
 .post {
     display: flex;
@@ -211,6 +214,8 @@ body h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    max-width: 700px;
 }
 .avatar-image-container {
    height: 45vh;
@@ -294,4 +299,38 @@ body h1, h2, h3, h4, h5, h6 {
     background-color: rgb(103, 170, 170);
     height: 10pt;
     width: 50%;
+}
+
+
+/*---USER QUESTLOG SECTION ------------*/
+/* UserQuestLog.js */
+.user-quest-log {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 83vh;
+    width: 100vw;
+}
+/* PendingQuests.js */
+.pending-quest-log{
+    color: white;
+    background-color: rgb(156, 3, 3);
+    padding: 10pt;
+    width: 100%;
+}
+/* InProgressQuests.js */
+.in-progress-quest-log {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+/* CompleteQuests.js */
+.complete-quest-log{
+    color: black;
+    background-color: rgb(103, 170, 170);
+    padding: 10pt;
+    width: 100%;
 }

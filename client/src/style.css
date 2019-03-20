@@ -128,7 +128,7 @@ body h1, h2, h3, h4, h5, h6 {
 /* Navbar.js */
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     padding: 10px;
@@ -137,11 +137,19 @@ body h1, h2, h3, h4, h5, h6 {
     /* background-color: rgb(180, 48, 76); */
     background-color: rgb(156, 3, 3);
     /* background-color: rgb(103, 170, 170); */
-    
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;    
 }
 .navbar a{
     text-decoration: none;
     color: rgb(248, 248, 221);
+}
+.navbar img {
+    height: 5vh;
+    filter: invert(82%);
+    margin: 3px 35px;
 }
 /* Authenticated.js */
 .authenticated-container {
@@ -156,10 +164,173 @@ body h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding-top: 4vh;
+}
+.home-dashboard > h3 {
+    font-weight: 500;
+}
+/* Post.js */
+.post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vh 5vw;
+    padding: 1vh 0vw;
+    border-bottom: solid rgba(0, 0, 0, 0.13) 1px;
+}
+.post:nth-child(1) {
+    border-top: solid rgba(0, 0, 0, 0.13) 1px;
+}
+.post > img {
+    height: 10vh;
+    width: calc(10vh);
+    padding: 1vh;
+    background-color: rgb(96, 98, 59);
+    border-radius: 20%;
+    filter: invert(90%) drop-shadow(rgba(0, 0, 0, 0.712) 2px 2px 3px);
+    margin-right: 4vw;
+}
+.post > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+.status-updates {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5vh;
+    font-size: .8em;
+    line-height: 1.5em;
+    padding: 0vh 2vw;
 }
 
 /* UserDashboard.js */
-    /* UserCharSheet.js */
-    /* UserBadgesList.js */
-    /* UserSocial.js */
-/* PersonalFeed.js */
+.user-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 700px;
+}
+.avatar-image-container {
+   height: 45vh;
+   width: 100vw;
+   max-width: calc(75vh);
+   background-image: url(https://sportsandthemind.com/wp-content/uploads/2014/04/Avatar-1.png);
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   padding: 10pt 20pt;
+}
+.avatar-image-container > h3 {
+    color: white;
+    font-weight: bolder;
+    text-shadow: black 2px 2px 2px;
+    text-transform: uppercase;
+}
+.user-dashboard-container > h1 {
+    font-size: 1.25em;
+    margin-top: 1vh;
+}
+.user-dashboard-container  > h2 {
+    font-size: 1em;
+    font-variant: small-caps;
+    font-weight: lighter;
+}
+.player-skill-lvl-container {
+    padding-top: 10pt;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+/* PlayerLvl.js */
+.player-level{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.player-level > p {
+    font-size: 15pt;
+    margin-bottom: 3.5pt;
+}
+.level-bar {
+    border: rgb(156, 3, 3) solid 1px;
+    width: 80vw;
+    height: 25pt;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 2pt;
+}
+.progress-bar {
+    height: 19pt;
+    width: 50%;
+    background-color:  rgb(156, 3, 3);
+}
+/* PlayerSkillLvl.js */
+.skill-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+}
+.skill-bar-container > p {
+    padding-right: 6pt;
+}
+.skill-bar {
+    border: rgb(103, 170, 170) solid 1px;
+    height: 15pt;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5px;
+}
+.skill-progress-meter {
+    background-color: rgb(103, 170, 170);
+    height: 10pt;
+    width: 50%;
+}
+
+
+/*---USER QUESTLOG SECTION ------------*/
+/* UserQuestLog.js */
+.user-quest-log {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 83vh;
+    width: 100vw;
+}
+/* PendingQuests.js */
+.pending-quest-log{
+    color: white;
+    background-color: rgb(156, 3, 3);
+    padding: 10pt;
+    width: 100%;
+}
+/* InProgressQuests.js */
+.in-progress-quest-log {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+/* CompleteQuests.js */
+.complete-quest-log{
+    color: black;
+    background-color: rgb(103, 170, 170);
+    padding: 10pt;
+    width: 100%;
+}

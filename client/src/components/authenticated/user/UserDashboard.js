@@ -2,21 +2,27 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 //COMPONENTS
-import UserBadgesList from "./UserBadgesList.js"
-import UserCharSheet from "./UserCharSheet.js"
-import UserSocial from "./UserSocial.js"
-import UserQuestLog from "./UserQuestLog.js"
+import PlayerLvl from "./PlayerLvl.js"
+import PlayerSkillLvls from "./PlayerSkillLvls.js"
 
 const UserDashboard = () => {
     return (
         <section className="user-dashboard-container">
-            <img alt="avatar" src="https://sportsandthemind.com/wp-content/uploads/2014/04/Avatar-1.png"/>
-            <h1>Name</h1>
-            <h2>Title</h2>
-            <UserCharSheet/>
-            <UserBadgesList/>
-            <UserSocial/>
-            <UserQuestLog/>
+            <div className="avatar-image-container">
+                <h3>Lvl 5</h3>
+            </div>
+            <h1>Player Name</h1>
+            <h2>Player Title</h2>
+            <PlayerLvl/>
+            <div className="player-skill-lvl-container">
+                <PlayerSkillLvls/>
+                <PlayerSkillLvls/>
+                <PlayerSkillLvls/>
+                <PlayerSkillLvls/>
+                <PlayerSkillLvls/>
+                <PlayerSkillLvls/>
+    
+            </div>
         </section>
     )
 };

@@ -1,12 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+//IMAGES
+import QuestIcon from "./001-shield.png"
+import SocialIcon from "./003-like.png"
+import UserIcon from "./002-user.png"
+
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <Link to="/site/home">Home</Link>
-            <Link to="/site/user">User Dashboard</Link>
-            <Link to="/site/social">Personal Feed</Link>
+            <Link to="/site/home"><img alt="social" src={SocialIcon}/></Link>
+            <Link to="/site/user"><img alt="user-dashboard" src={UserIcon}/></Link>
+            <Link to="/site/social"><img alt="quest-library" src={QuestIcon}/></Link>
         </nav>
     )
 };

@@ -27,7 +27,7 @@ playerRouter.route("/")
 
 //    ONE PLAYER MANIPULATION
 //  Get One Player
-playerRouter.route("./:_id")
+playerRouter.route("/:_id")
     .get( (req, res, next) => {
         Player.findOne({_id: req.params._id}, (err, player) => {
             if(err){

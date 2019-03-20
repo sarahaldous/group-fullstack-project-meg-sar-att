@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router'
 import TempNavBar from "./TempNavBar.js" //delete when real navbar(s) is implemented
 import AdminDashboard from "./components/admin/AdminDashboard.js"
 import Authenticated from "./components/authenticated/Authenticated.js"
-// import LoadingPage from "./components/loading-page/LoadingPage.js"
+import LoadingPage from "./components/loading-page/LoadingPage.js"
 import PlaceHolder from "./components/Placeholder.js"
 import Unauthenticated from "./components/unauthenticated/Unauthenticated.js"
 import axios from 'axios'
@@ -99,7 +99,7 @@ class App extends Component {
             <div className="app-container">
                 <TempNavBar/>
                 <Switch>
-                    {/* <Route path="/" component={LoadingPage}/> */}
+                    <Route exact path="/" component={LoadingPage}/>
                     <Route path="/welcome" component={Unauthenticated}/>
                     <Route path="/admin" component={AdminDashboard}/>
                     <Route path="/waitforit" component={PlaceHolder}/>

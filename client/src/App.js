@@ -9,16 +9,13 @@ import Authenticated from "./components/authenticated/Authenticated.js"
 // import LoadingPage from "./components/loading-page/LoadingPage.js"
 import PlaceHolder from "./components/Placeholder.js"
 import Unauthenticated from "./components/unauthenticated/Unauthenticated.js"
-import axios from 'axios';
+import axios from 'axios'
 
 class App extends Component {
     constructor(){
         super()
         this.state={
-            name: "",
-            avatar: "",
-            level: 0,
-            questLog: [],
+           
             title: "",
             summary: "",
             description: "",
@@ -29,42 +26,71 @@ class App extends Component {
             qLMaster: []
         }
     }
+    //Players 
+    
+    //Quests
     componentDidMount(){
-        axios.get("/players").then(response => {
+        axios.get("/quests").then(response => {
             this.setState({
-                players: response.data
+                quests: response.data
             })
         })
         .catch(err => console.log(err))
     }
+    //Players
+    
+    //Quests
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value 
         })
     }
+    //Quests
     handleSubmit = e => {
         e.preventDefault()
-        const newPlayer = {
-            name: this.state.name,
-            avatar: this.state.avatar,
-            level: this.state.level,
-            questLog: this.state.questLog
+        const newQuest = {
+            title: this.state.title,
+            summary: this.state.summary,
+            description: this.state.description,
+            youtubeEmbed: this.state.youtubeEmbed,
+            imageUrl: this.state.imageUrl,
+            qLNovice: [],
+            qLJourneyman: [],
+            qLMaster: []
+            
         }
-        axios.post("/players", newPlayer).then(response => {
+        axios.post("/quests", newQuest).then(response => {
             this.setState(prevState => ({
-                players: [...prevState.wizards, response.data],
-                name: "",
-                avatar: "",
-                level: 0,
-                questLog: []
+                quests: [...prevState.quests, response.data],
+                title: "",
+                summary: "",
+                description: "",
+                youtubeEmbed: "",
+                imageUrl: "",
+                qLNovice: [],
+                qLJourneyman: [],
+                qLMaster: []
             }))
+             
         })
     }
+    // player
+    
+    // player
     handleDelete = (_id) => {
         axios.delete(`/players/${_id}`).then(response => {
             alert(response.data)
             this.setState(prevState => ({
                 players: prevState.players.filter(player => player._id !== _id)
+            }))
+        })
+    }
+    // quests
+    handleDelete = (_id) => {
+        axios.delete(`/quests/${_id}`).then(response => {
+            alert(response.data)
+            this.setState(prevState => ({
+                quests: prevState.quests.filter(quest => quest._id !== _id)
             }))
         })
     }

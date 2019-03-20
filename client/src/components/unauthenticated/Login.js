@@ -1,17 +1,17 @@
 import React from 'react'
 
-const Login = () => {
+const Login = (props) => {
     return (
-        <form className="login">
-            <span>Username: </span>
-            <input/>
-           
-            <button>Login</button>
-            <div>
-                
-            </div>
+        <form onSubmit={props.handleSubmit} className="login">
+            <input
+                type="text"
+                name="name"
+                placeholder="username"
+                value={props.name}
+                onChange={props.handleChange}/>
+            <button>Log In</button>
+            
         </form>
     )
 }
-
 export default Login

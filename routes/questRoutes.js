@@ -25,7 +25,7 @@ questRouter.route("/")
     })
 
 
-questRouter.route("./:_id")
+questRouter.route("/:_id")
     .get( (req, res, next) => {
         Quest.findOne({_id: req.params._id}, (err, quest) => {
             if(err){

@@ -7,6 +7,6 @@ const AdminDashboard = () => {
             <img src="http://notliberal.com/wp-content/uploads/2018/02/adult-1.jpg"/>
         </section>
     )
-}
+};
 
 export default AdminDashboard

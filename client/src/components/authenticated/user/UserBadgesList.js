@@ -5,6 +5,6 @@ const UserBadgesList = () => {
         //wireframing based on relivant API data needed to continue
         <div>Badges icons here</div>
     )
-}
+};
 
 export default UserBadgesList

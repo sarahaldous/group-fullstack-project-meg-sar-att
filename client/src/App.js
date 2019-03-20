@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import { Switch, Route } from 'react-router'
-// import axios from 'axios'
+import { Switch, Route } from 'react-router-dom'
+import axios from 'axios';
 
 //COMPONENTS
 import TempNavBar from "./TempNavBar.js" //delete when real navbar(s) is implemented
@@ -9,11 +9,11 @@ import Authenticated from "./components/authenticated/Authenticated.js"
 // import LoadingPage from "./components/loading-page/LoadingPage.js"
 import PlaceHolder from "./components/Placeholder.js"
 import Unauthenticated from "./components/unauthenticated/Unauthenticated.js"
-import axios from 'axios';
+
 
 class App extends Component {
     constructor(){
-        super()
+        super();
         this.state={
             name: "",
             avatar: "",
@@ -41,33 +41,33 @@ class App extends Component {
         this.setState({
             [e.target.name]: e.target.value 
         })
-    }
+    };
     handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
         const newPlayer = {
             name: this.state.name,
             avatar: this.state.avatar,
             level: this.state.level,
             questLog: this.state.questLog
-        }
+        };
         axios.post("/players", newPlayer).then(response => {
             this.setState(prevState => ({
-                players: [...prevState.wizards, response.data],
+                players: [...prevState.players, response.data],
                 name: "",
                 avatar: "",
                 level: 0,
                 questLog: []
             }))
         })
-    }
+    };
     handleDelete = (_id) => {
         axios.delete(`/players/${_id}`).then(response => {
-            alert(response.data)
+            alert(response.data);
             this.setState(prevState => ({
                 players: prevState.players.filter(player => player._id !== _id)
             }))
         })
-    }
+    };
     render(){
         return (
             <div className="app-container">
@@ -83,5 +83,7 @@ class App extends Component {
         )
     }
 }
+
+
 
 export default App

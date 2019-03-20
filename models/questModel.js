@@ -1,5 +1,5 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 const questSchema = new Schema({
     title:{
@@ -33,6 +33,6 @@ const questSchema = new Schema({
         type: String,
         playerIDs: Schema.Types.ObjectId
     }
-})
+});
 
-module.exports = mongoose.model("Quest", questSchema)
+module.exports = mongoose.model("Quest", questSchema);

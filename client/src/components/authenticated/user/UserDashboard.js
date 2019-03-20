@@ -19,6 +19,6 @@ const UserDashboard = () => {
             <UserQuestLog/>
         </section>
     )
-}
+};
 
 export default UserDashboard

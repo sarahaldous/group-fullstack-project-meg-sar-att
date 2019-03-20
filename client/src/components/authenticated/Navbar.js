@@ -9,6 +9,6 @@ const Navbar = () => {
             <Link to="/site/social">Personal Feed</Link>
         </nav>
     )
-}
+};
 
 export default Navbar

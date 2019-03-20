@@ -13,6 +13,6 @@ const SignUp = () => {
             <button>Sign Up</button>
         </form>
     )
-}
+};
 
 export default SignUp

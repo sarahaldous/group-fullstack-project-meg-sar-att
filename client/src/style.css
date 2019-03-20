@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Philosopher|Quattrocento+Sans');
 /* font-family: 'Quattrocento Sans', sans-serif; */
 /* font-family: 'Philosopher', sans-serif; */
@@ -16,9 +15,11 @@
 body {
     font-family: 'Quattrocento Sans', sans-serif;
 }
+
 body h1, h2, h3, h4, h5, h6 {
     font-family: 'Philosopher', sans-serif;
 }
+
 /* App.js */
 .app-container {
     width: 100vw;
@@ -26,21 +27,22 @@ body h1, h2, h3, h4, h5, h6 {
     /* background-color: rgb(134, 12, 43); */
     background-color: rgb(253, 253, 194);
     /* background-color: rgb(186, 212, 187); */
-    
+
     text-align: center;
-  
+
 }
 
 /* LoadingPage.js */
-.loading-container {    display: flex;
+.loading-container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-    .loading-container > img {
-        height: 75vh;
-    }
 
+.loading-container > img {
+    height: 75vh;
+}
 
 
 /*---TEMPORARY COMPONENTS-------------------*/
@@ -52,9 +54,9 @@ body h1, h2, h3, h4, h5, h6 {
     /* background-color: rgb(180, 48, 76); */
     background-color: rgb(103, 170, 170);
     padding: 10px;
-    width: 100vw; 
-    
+    width: 100vw;
 }
+
 /* Placeholder.js */
 .placeholder-container {
     display: flex;
@@ -62,9 +64,10 @@ body h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
 }
-    .placeholder-container > img {
-        height: 75vh;
-    }
+
+.placeholder-container > img {
+    height: 75vh;
+}
 
 
 /*---ADMIN SECTION -------------------------*/
@@ -75,9 +78,10 @@ body h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
 }
-    .admin-dashboard-container > img {
-        height: 75vh;
-    }
+
+.admin-dashboard-container > img {
+    height: 75vh;
+}
 
 
 /*---UNAUTHENTICATED USER SECTION ----------*/
@@ -89,6 +93,7 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding-top: 15px;
 }
+
 /* Login.js */
 .login {
     display: flex;
@@ -97,6 +102,7 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin-top: 15px;
 }
+
 /* SignUp.js */
 .sign-up {
     display: flex;
@@ -105,6 +111,7 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin-top: 15px;
 }
+
 /* WelcomeAbout.js */
 .welcome-about {
     display: flex;
@@ -112,6 +119,7 @@ body h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
 }
+
 /* WelcomeFooter.js */
 .welcome-footer {
     display: flex;
@@ -137,12 +145,14 @@ body h1, h2, h3, h4, h5, h6 {
     /* background-color: rgb(180, 48, 76); */
     background-color: rgb(156, 3, 3);
     /* background-color: rgb(103, 170, 170); */
-    
+
 }
-.navbar a{
+
+.navbar a {
     text-decoration: none;
     color: rgb(248, 248, 221);
 }
+
 /* Authenticated.js */
 .authenticated-container {
     display: flex;
@@ -150,6 +160,7 @@ body h1, h2, h3, h4, h5, h6 {
     justify-content: space-around;
     align-items: center;
 }
+
 /* HomeDashboard.js */
 .home-dashboard {
     display: flex;
@@ -159,7 +170,7 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 /* UserDashboard.js */
-    /* UserCharSheet.js */
-    /* UserBadgesList.js */
-    /* UserSocial.js */
+/* UserCharSheet.js */
+/* UserBadgesList.js */
+/* UserSocial.js */
 /* PersonalFeed.js */

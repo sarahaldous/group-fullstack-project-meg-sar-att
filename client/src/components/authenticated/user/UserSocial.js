@@ -7,6 +7,6 @@ const UserSocial = () => {
             <p>Network icons here</p>
         </div>
     )
-}
+};
 
 export default UserSocial

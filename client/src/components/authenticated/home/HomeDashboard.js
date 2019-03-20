@@ -9,6 +9,6 @@ const HomeDashboard = () => {
             <p>New Votes</p>
         </section>
     )
-}
+};
 
 export default HomeDashboard

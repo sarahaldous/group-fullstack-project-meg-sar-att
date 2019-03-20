@@ -9,6 +9,6 @@ const PersonalFeed = () => {
             <p>self</p>
         </div>
     )
-}
+};
 
 export default PersonalFeed

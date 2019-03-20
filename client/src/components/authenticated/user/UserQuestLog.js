@@ -6,6 +6,6 @@ const UserQuestLog = () => {
             Quest Log Goes Here
         </div>
     )
-}
+};
 
 export default UserQuestLog

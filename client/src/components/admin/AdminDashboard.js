@@ -12,9 +12,6 @@ const AdminDashboard = (props) => {
                     value={props.name}
                     onChange={props.handleChange}/>
                 
-
-
-
             </form>
         <section className="admin-dashboard-container">
             <h1>Admin's only, go away!</h1>

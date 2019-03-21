@@ -55,7 +55,6 @@ class HomeDashboard extends Component {
             </section>
         )
     }
-    
 }
 
 export default HomeDashboard

@@ -24,4 +24,5 @@ const AdminDashboard = (props) => {
     )
 }
 
-export default withPlayer(AdminDashboard)
+export default AdminDashboard
+// export default withPlayer(AdminDashboard)

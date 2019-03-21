@@ -2,40 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a3b85c-085c-4008-823d-563b760ef07d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/TempNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/TempNavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Placeholder.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authenticated/quests/CompletedQuests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authenticated/quests/CurrentQuests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authenticated/quests/QuestCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authenticated/quests/QuestLibrary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authenticated/quests/QuestList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/authenticated/quests/Quests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/020-fox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/022-charon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/023-golem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/024-genie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/025-monster.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/026-cthulhu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/027-griffin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/028-hydra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/029-tooth-fairy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/030-zombie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/031-halloween.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/032-wolf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/033-alien.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/034-monster-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/035-alien-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/avatars/Avatar-Cheatsheet-Delete-Later.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/Authenticated.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/Authenticated.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/home/HomeDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/home/HomeDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/home/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/home/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/quest-library/QuestLibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/quest-library/QuestLibrary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/questlog/CompleteQuests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/questlog/CompleteQuests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/questlog/InProgressQuests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/questlog/InProgressQuests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/questlog/PendingQuests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/questlog/PendingQuests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/questlog/UserQuestLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/questlog/UserQuestLog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/user/PlayerLvl.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/user/PlayerLvl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/user/PlayerSkillLvls.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/user/PlayerSkillLvls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/user/UserNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/user/UserNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unauthenticated/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unauthenticated/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unauthenticated/Unauthenticated.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unauthenticated/Unauthenticated.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unauthenticated/WelcomeAbout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unauthenticated/WelcomeAbout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unauthenticated/WelcomeFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unauthenticated/WelcomeFooter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/context/PlayerProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/PlayerProvider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/license/license.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/license/license.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/playerModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/playerModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/questModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/questModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/adultingRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adultingRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/playerRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/playerRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/questRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/questRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +55,7 @@
             <entry file="file://$PROJECT_DIR$/client/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-344">
-                  <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+                  <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -65,10 +66,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/components/unauthenticated/Unauthenticated.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+                <state relative-caret-position="306">
+                  <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
+                    <element signature="e#89#119#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -99,10 +101,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+                <state relative-caret-position="34">
+                  <caret line="2" selection-start-line="2" selection-end-line="2" />
                   <folding>
-                    <element signature="e#0#25#0" expanded="true" />
+                    <element signature="e#0#38#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -111,8 +113,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/context/PlayerProvider.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="351">
-                  <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+                <state relative-caret-position="422">
+                  <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -167,8 +169,8 @@
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/package.json" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" />
         <option value="$PROJECT_DIR$/client/src/context/PlayerProvider.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" />
       </list>
     </option>
   </component>
@@ -251,13 +253,6 @@
             <path>
               <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
               <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="license" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -326,7 +321,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27424000" />
+    <option name="totallyTimeSpent" value="27660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="23" width="1873" height="1057" extended-state="6" />
@@ -334,7 +329,6 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916527" visible="true" weight="0.11851447" />
       <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.27485928" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32953367" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -346,6 +340,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4990619" weight="0.32953367" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31709844" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50093806" side_tool="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -548,7 +543,7 @@
     <entry file="file://$PROJECT_DIR$/client/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-344">
-          <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -571,28 +566,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/unauthenticated/Unauthenticated.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="306">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#89#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/context/PlayerProvider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        <state relative-caret-position="422">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>

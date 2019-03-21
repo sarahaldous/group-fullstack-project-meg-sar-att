@@ -29,11 +29,6 @@ class PlayerProvider extends Component{
                 players: res.data
             })
         })
-        .catch(err => console.log(err))
-    }
-    
-    
-    render(){
         return (
             <PlayerContext.Provider
                 value={{...this.state, 

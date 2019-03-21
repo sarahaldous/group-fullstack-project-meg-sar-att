@@ -20,7 +20,7 @@ class PlayerProvider extends Component{
     }
     handleSubmit = e => {
         e.preventDefault()
-        getPlayerData
+        // getPlayerData
     }
     getPlayerData = () =>{
         axios.get("/players/:_id").then(res => {
@@ -37,10 +37,9 @@ class PlayerProvider extends Component{
                 </PlayerContext.Provider>
         )
         
-    }
-      
-    
+    }  
 }
+
 export const withPlayer = C => props => (
     <PlayerContext.Consumer>
         {value => <C {...props} {...value} />}

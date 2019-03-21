@@ -11,7 +11,7 @@ const AdminDashboard = (props) => {
                     placeholder="Username"
                     value={props.name}
                     onChange={props.handleChange}/>
-                </input>
+                
             </form>
         <section className="admin-dashboard-container">
             <h1>Admin's only, go away!</h1>

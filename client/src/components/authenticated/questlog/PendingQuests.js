@@ -6,6 +6,6 @@ const PendingQuests = () => {
             Pending Quests
         </section>
     )
-}
+};
 
 export default PendingQuests

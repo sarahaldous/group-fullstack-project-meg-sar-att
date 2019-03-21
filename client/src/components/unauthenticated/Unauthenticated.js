@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route } from 'react-router'
+import { Switch, Route } from 'react-router-dom'
 
 //COMPONENTS
 import Login from './Login.js'
@@ -18,6 +18,6 @@ const Unauthenticated = () => {
             <WelcomeFooter/>       
         </section>
     )
-}
+};
 
 export default Unauthenticated

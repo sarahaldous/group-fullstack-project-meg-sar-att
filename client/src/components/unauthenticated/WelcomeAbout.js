@@ -8,6 +8,6 @@ const WelcomeAbout = () => {
             <p>Adulting is hard. Play a game instead.</p>
         </section>
     )
-}
+};
 
 export default WelcomeAbout

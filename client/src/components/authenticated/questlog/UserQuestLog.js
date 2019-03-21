@@ -13,6 +13,6 @@ const Questlog = () => {
             <CompletedQuests/>
         </section>
     )
-}
+};
 
 export default Questlog

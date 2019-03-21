@@ -6,6 +6,6 @@ const CompleteQuests = () => {
             Complete Quests
         </section>
     )
-}
+};
 
 export default CompleteQuests

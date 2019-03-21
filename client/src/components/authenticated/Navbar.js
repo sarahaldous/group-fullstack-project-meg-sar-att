@@ -14,6 +14,6 @@ const Navbar = () => {
             <Link to="/site/social"><img alt="quest-library" src={QuestIcon}/></Link>
         </nav>
     )
-}
+};
 
 export default Navbar

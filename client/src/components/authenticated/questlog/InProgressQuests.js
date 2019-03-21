@@ -6,6 +6,6 @@ const InProgressQuests = () => {
             In Progress Quests
         </section>
     )
-}
+};
 
 export default InProgressQuests

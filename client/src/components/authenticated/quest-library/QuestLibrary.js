@@ -33,6 +33,6 @@ const QuestLibrary = () => {
             <div className="quest-scroll-right"></div>
         </section>
     )
-}
+};
 
 export default QuestLibrary

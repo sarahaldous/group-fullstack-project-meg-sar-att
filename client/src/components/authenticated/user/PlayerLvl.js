@@ -9,6 +9,6 @@ const PlayerLvl = () => {
             </div>
         </div>
     )
-}
+};
 
 export default PlayerLvl

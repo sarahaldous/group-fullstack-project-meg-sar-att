@@ -21,6 +21,6 @@ const Authenticated = () => {
             <Navbar/>
         </section>
     )
-}
+};
 
 export default Authenticated

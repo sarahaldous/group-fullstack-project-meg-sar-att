@@ -348,60 +348,61 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*---USER QUESTLOG SECTION ------------*/
-/* UserQuestLog.js */
-.user-quest-log {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 83vh;
-    width: 100vw;
-}
-/* InProgressQuests.js */
-.in-progress-quest-log {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-between;
-    min-height: 95vh;
-    width: 100vw;
-}
-.in-progress-quest-log > .pending-quests-div {
-    color: black;
+/*--- QUESTS SECTION ------------*/
+/* Quests.js */
+.quest-library-toggle {
     background-color: rgb(156, 3, 3);
-    box-shadow: rgba(0, 0, 0, 0.602) -10px 3px 15px,
-                inset rgba(0, 0, 0, 0.616) -10px 3px 15px;
-    margin-top: 10vh;
-    padding: 10pt;
-    width: 105%;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1.25em;
+    width: 100vw;
+    padding: 10px;
 }
-.in-progress-quest-log > .inprogress-quests-div {
+.current-quests-toggle {
+    background-color: rgb(253, 253, 194);
+    width: 100vw;
+    padding: 10px; 
+}
+.completed-quests-toggle {
+    background-color: rgb(103, 170, 170);
+    width: 100vw;
+    padding: 10px;
+}
+/* QuestLibrary.js */
+
+/* CompletedQuets.js */
+/* CurrentQuests.js */
+/* QuestList.js */
+/* QuestCard.js */
+.quest-card {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    min-height: 74vh;
-    padding: 10pt;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1.25em;
-}
-.in-progress-quest-log > .completed-quests-div {
+    align-content: center;
     color: black;
-    background-color: rgb(103, 170, 170);
-    box-shadow: inset rgba(204, 103, 103, 0.534) -10px -3px 15px,
-                inset rgba(0, 0, 0, 0.376) -10px 3px 15px;
-    margin-bottom: 11vh;
-    padding: 10pt;
-    width: 105%;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1.25em;
+    border-top: rgba(103, 170, 170, 0.432) solid 1px;
+    border-bottom: rgba(103, 170, 170, 0.432) solid 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px 10px 15px 10px;
 }
-/* CompleteQuests.js */
-/* .complete-quest-log{
-} */
+.quest-card > h3 {
+    font-size: 1em;
+    margin-top: 15px;
+}
+.quest-card > iframe {
+    width: 90vw;
+    height: calc(60vw);
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+}
+.quest-card > p {
+    font-size: 0.75em;
+    text-align: left;
+    margin-top: 10px;
+}
+.quest-card > .reward-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-/* .QuestLibrary.js */

@@ -285,7 +285,7 @@ body h1, h2, h3, h4, h5, h6 {
     font-size: 1.25em;
     margin-top: 1vh;
 }
-.user-dashboard-container  > h2 {
+.user-dashboard-container > h2 {
     font-size: 1em;
     font-variant: small-caps;
     font-weight: lighter;
@@ -298,7 +298,7 @@ body h1, h2, h3, h4, h5, h6 {
     justify-content: space-around;
 }
 /* PlayerLvl.js */
-.player-level{
+.player-level {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -358,25 +358,50 @@ body h1, h2, h3, h4, h5, h6 {
     height: 83vh;
     width: 100vw;
 }
-/* PendingQuests.js */
-.pending-quest-log{
-    color: white;
-    background-color: rgb(156, 3, 3);
-    padding: 10pt;
-    width: 100%;
-}
 /* InProgressQuests.js */
 .in-progress-quest-log {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    min-height: 95vh;
+    width: 100vw;
+}
+.in-progress-quest-log > .pending-quests-div {
+    color: black;
+    background-color: rgb(156, 3, 3);
+    box-shadow: rgba(0, 0, 0, 0.602) -10px 3px 15px,
+                inset rgba(0, 0, 0, 0.616) -10px 3px 15px;
+    margin-top: 10vh;
+    padding: 10pt;
+    width: 105%;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.25em;
+}
+.in-progress-quest-log > .inprogress-quests-div {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: space-around;
+    align-items: center;
+    min-height: 74vh;
+    padding: 10pt;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.25em;
 }
-/* CompleteQuests.js */
-.complete-quest-log{
+.in-progress-quest-log > .completed-quests-div {
     color: black;
     background-color: rgb(103, 170, 170);
+    box-shadow: inset rgba(204, 103, 103, 0.534) -10px -3px 15px,
+                inset rgba(0, 0, 0, 0.376) -10px 3px 15px;
+    margin-bottom: 11vh;
     padding: 10pt;
-    width: 100%;
+    width: 105%;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.25em;
 }
+/* CompleteQuests.js */
+/* .complete-quest-log{
+} */
+
+/* .QuestLibrary.js */

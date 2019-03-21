@@ -1,0 +1,130 @@
+//---ARRAY-------------------------------------------------------------//
+const defaultAvatars = [
+    {
+        name: dragonImg,
+        path: "../components/avatars/004-dragon.png"
+    },{
+        name: mermaidImg,
+        path: "../components/avatars/005-mermaid.png"
+    },{
+        name: mermaid1Img,
+        path: "../components/avatars/006-mermaid-1.png"
+    },{
+        name: unicornImg,
+        path: "../components/avatars/007-unicorn.png"
+    },{
+        name: merlionImg,
+        path: "../components/avatars/008-merlion.png"
+    },{
+        name: pegasusImg,
+        path: "../components/avatars/009-pegasus.png"
+    },{
+        name: wizardImg,
+        path: "../components/avatars/010-wizard.png"
+    },{
+        name: narwhalImg,
+        path: "../components/avatars/011-narwhal.png"
+    },{
+        name: robotImg,
+        path: "../components/avatars/012-robot.png"
+    },{
+        name: centaurImg,
+        path: "../components/avatars/013-centaur.png"
+    },{
+        name: yetiImg,
+        path: "../components/avatars/014-yeti.png"
+    },{
+        name: chimeraImg,
+        path: "../components/avatars/015-chimera.png"
+    },{
+        name: gryphonImg,
+        path: "../components/avatars/016-gryphon.png"
+    },{
+        name: medusaImg,
+        path: "../components/avatars/017-medusa.png"
+    },{
+        name: echidnaImg,
+        path: "../components/avatars/018-echidna.png"
+    },{
+        name: harpyImg,
+        path: "../components/avatars/019-harpy.png"
+    },{
+        name: foxImg,
+        path: "../components/avatars/020-fox.png"
+    },{
+        name: charonImg,
+        path: "../components/avatars/022-charon.png"
+    },{
+        name: golemImg,
+        path: "../components/avatars/023-golem.png"
+    },{
+        name: genieImg,
+        path: "../components/avatars/024-genie.png"
+    },{
+        name: monsterImg,
+        path: "../components/avatars/025-monster.png"
+    },{
+        name: cthuluImg,
+        path: "../components/avatars/026-cthulu.png"
+    },{
+        name: griffinImg,
+        path: "../components/avatars/027-griffin.png"
+    },{
+        name: hydraImg,
+        path: "../components/avatars/028-hydra.png"
+    },{
+        name: toothfairyImg,
+        path: "../components/avatars/029-tooth-fairy.png"
+    },{
+        name: zombieImg,
+        path: "../components/avatars/030-zombie.png"
+    },{
+        name: halloweenImg,
+        path: "../components/avatars/031-halloween.png"
+    },{
+        name: wolfImg,
+        path: "../components/avatars/032-wolf.png"
+    },{
+        name: alienImg,
+        path: "../components/avatars/033-alien.png"
+    },{
+        name: monster1Img,
+        path: "../components/avatars/034-monster-1.png"
+    },{
+        name: alien1Img,
+        path: "../components/avatars/035-alien-1.png"
+    }
+]
+
+//---IMPORTS--------------------------------------------------------/
+import dragonImg from "../components/avatars/004-dragon.png"
+import mermaidImg from "../components/avatars/005-mermaid.png"
+import mermaid1Img from "../components/avatars/006-mermaid-1.png"
+import unicornImg from "../components/avatars/007-unicorn.png"
+import merlionImg from "../components/avatars/008-merlion.png"
+import pegasusImg from "../components/avatars/009-pegasus.png"
+import wizardImg from "../components/avatars/010-wizard.png"
+import narwhalImg from "../components/avatars/011-narwhal.png"
+import robotImg from "../components/avatars/012-robot.png"
+import centaurImg from "../components/avatars/013-centaur.png"
+import yetiImg from "../components/avatars/014-yeti.png"
+import chimeraImg from "../components/avatars/015-chimera.png"
+import gryphonImg from "../components/avatars/016-gryphon.png"
+import medusaImg from "../components/avatars/017-medusa.png"
+import echidnaImg from "../components/avatars/018-echidna.png"
+import harpyImg from "../components/avatars/019-harpy.png"
+import foxImg from "../components/avatars/020-fox.png"
+import charonImg from "../components/avatars/022-charon.png"
+import golemImg from "../components/avatars/023-golem.png"
+import genieImg from "../components/avatars/024-genie.png"
+import monsterImg from "../components/avatars/025-monster.png"
+import cthuluImg from "../components/avatars/026-cthulu.png"
+import griffinImg from "../components/avatars/027-griffin.png"
+import hydraImg from "../components/avatars/028-hydra.png"
+import toothfairyImg from "../components/avatars/029-tooth-fairy.png"
+import zombieImg from "../components/avatars/030-zombie.png"
+import halloweenImg from "../components/avatars/031-halloween.png"
+import wolfImg from "../components/avatars/032-wolf.png"
+import alienImg from "../components/avatars/033-alien.png"
+import monster1Img from "../components/avatars/034-monster-1.png"
+import alien1Img from "../components/avatars/035-alien-1.png"

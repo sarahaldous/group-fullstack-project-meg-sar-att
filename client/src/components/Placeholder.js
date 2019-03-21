@@ -7,6 +7,6 @@ const Placeholder = () => {
             <img src="https://s3.amazonaws.com/thumbnails.illustrationsource.com/huge.100.504932.JPG"></img>
         </section>
     )
-}
+};
 
 export default Placeholder

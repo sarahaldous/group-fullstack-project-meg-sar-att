@@ -8,6 +8,6 @@ const UserNavbar = () => {
             <Link to="">Questlog</Link>
         </nav>
     )
-}
+};
 
 export default UserNavbar

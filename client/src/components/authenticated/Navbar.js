@@ -11,7 +11,7 @@ const Navbar = () => {
         <nav className="navbar">
             <Link to="/site/home"><img alt="social" src={SocialIcon}/></Link>
             <Link to="/site/user"><img alt="user-dashboard" src={UserIcon}/></Link>
-            <Link to="/site/social"><img alt="quest-library" src={QuestIcon}/></Link>
+            <Link to="/site/quests"><img alt="quest-library" src={QuestIcon}/></Link>
         </nav>
     )
 }

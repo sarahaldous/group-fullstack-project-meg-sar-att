@@ -11,10 +11,7 @@ const AdminDashboard = (props) => {
                     placeholder="Username"
                     value={props.name}
                     onChange={props.handleChange}/>
-                
-
-
-
+                </input>
             </form>
         <section className="admin-dashboard-container">
             <h1>Admin's only, go away!</h1>
@@ -24,4 +21,5 @@ const AdminDashboard = (props) => {
     )
 }
 
-export default withPlayer(AdminDashboard)
+export default AdminDashboard
+// export default withPlayer(AdminDashboard)

@@ -44,7 +44,6 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     font-size: 48px;
-    color: white;
 }
 .loading-parallax::after {
     content: " ";
@@ -54,33 +53,11 @@ body h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: 0;
     transform: translateZ(-1px) scale(2);
-    /*background-size: 100%;*/
-    z-index: -1;
-    background-image: url('http://www.shainblumphoto.com/wp-content/uploads/2016/02/dubai_1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.loading-section2{
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-    color: white;
-}
-.loading-parallax2::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(-1px) scale(2);
     background-size: 100%;
     z-index: -1;
-    background-image: url("https://i.chzbgr.com/full/5751143168/h898FC51A/");
+    background-image: url('https://s3.scoopwhoop.com/anj/adulthood/12137e4e-e8e3-4f62-8789-a2dede82a54a.jpg');
     background-repeat: no-repeat;
+    /*background-size: cover;*/
 }
 .loading-content{
     background: floralwhite;

@@ -38,13 +38,7 @@ class App extends Component {
     //     .catch(err => console.log(err))
     // }
     //Players
-    
-    //Quests
-    handleChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value 
-        })
-    };
+
     //Quests
     handleSubmit = e => {
         e.preventDefault();
@@ -74,7 +68,6 @@ class App extends Component {
              
         })
     };
-    // player
     
     // player
     handleDelete = (_id) => {

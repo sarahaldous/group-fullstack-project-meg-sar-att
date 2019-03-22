@@ -1,0 +1,39 @@
+//---ARRAY-------------------------------------------------------------//
+const categoryIcons = [
+    {
+        name: "career",
+        path: "client/src/components/authenticated/quests/category-icons/career.png"
+    },{
+        name: "finance",
+        path: "client/src/components/authenticated/quests/category-icons/finance.png"
+    },{
+        name: "health",
+        path: "client/src/components/authenticated/quests/category-icons/health.png"
+    },{
+        name: "housing",
+        path: "client/src/components/authenticated/quests/category-icons/housing.png"
+    },{
+        name: "food",
+        path: "client/src/components/authenticated/quests/category-icons/food.png"
+    },{
+        name: "peopling",
+        path: "client/src/components/authenticated/quests/category-icons/peopling.png"
+    },{
+        name: "transportation",
+        path: "client/src/components/authenticated/quests/category-icons/transportation.png"
+    },{
+        name: "cleaning",
+        path: "client/src/components/authenticated/quests/category-icons/cleaning.png"
+    }
+    
+]
+
+//---IMPORT-------------------------------------------------------------//
+import careerIcon from "./src/components/authenticated/quests/category-icons/career.png"
+import "financeIcon from "./src/components/authenticated/quests/category-icons/finance.png"
+import "healthIcon from "./src/components/authenticated/quests/category-icons/health.png"
+import "housingIcon from "./src/components/authenticated/quests/category-icons/housing.png"
+import "foodIcon from "./src/components/authenticated/quests/category-icons/food.png"
+import "peoplingIcon from "./src/components/authenticated/quests/category-icons/peopling.png"
+import "transportationIcon from "./src/components/authenticated/quests/category-icons/transportation.png"
+import "cleaningIcon from "./src/components/authenticated/quests/category-icons/cleaning.png"

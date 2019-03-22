@@ -8,12 +8,12 @@ const QuestList = () => {
     return (
         <div className="quest-list">
             <QuestCard/>
-            {/* <QuestCard/>
             <QuestCard/>
             <QuestCard/>
             <QuestCard/>
-            <QuestCard/> */}
+            <QuestCard/>
         </div>
     )
 }
+
 export default QuestList

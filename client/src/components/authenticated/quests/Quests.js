@@ -7,17 +7,17 @@ import QuestLibrary from "./QuestLibrary.js"
 
 const Quests = () => {
     return (
-        <div className="quest-list">
+        <div className="quests-container">
             <div className="quest-library-toggle">
-                <h1>New Quests</h1>
+                <h2>New Quests</h2>
                 <QuestLibrary/>
             </div>
             <div className="current-quests-toggle">
-                <h1>Current Quests</h1>
+                <h2>Current Quests</h2>
                 <CurrentQuests/>
             </div>
             <div className="completed-quests-toggle">
-                <h1>Completed Quests</h1>
+                <h2>Completed Quests</h2>
                 <CompletedQuests/>
             </div>
         </div>

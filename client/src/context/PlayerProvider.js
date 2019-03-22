@@ -4,13 +4,14 @@ import axios from 'axios'
 const PlayerContext = React.createContext()
 
 class PlayerProvider extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             name: "",
             avatar: "",
             level: 0,
-            questLog: []
+            questLog: [],
+            _id: ""
         }
     }
     handleChange = e => {
@@ -19,25 +20,33 @@ class PlayerProvider extends Component{
         })
     }
     handleSubmit = e => {
+        console.log(e)
         e.preventDefault()
-        // getPlayerData
+        this.getPlayerData(this.state._id)
     }
-    getPlayerData = () =>{
-        axios.get("/players/:_id").then(res => {
+
+    getPlayerData = (_id) => {
+        console.log(_id)
+        axios.get(`/players/${_id}`).then(res => {
+
             console.log(res)
             this.setState({
-                players: res.data
+                name: res.data.name
             })
         })
+    }
+
+    render(){
         return (
             <PlayerContext.Provider
-                value={{...this.state, 
-                getPlayerData: this.state.getPlayerData}}>
+                value={{...this.state,
+                    handleChange: this.handleChange,
+                    handleSubmit: this.handleSubmit
+                }}>
                 {this.props.children}
-                </PlayerContext.Provider>
+            </PlayerContext.Provider>
         )
-        
-    }  
+    }
 }
 
 export const withPlayer = C => props => (

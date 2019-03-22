@@ -14,7 +14,8 @@ app.use("/players", require("./routes/playerRoutes.js"))
 app.use("/quests", require("./routes/questRoutes.js"))
 app.use("*", (req, res) =>{
     res.send("Error 404? \n" +
-        "You failed to hit anything that you intended. Try again.")
+        "Nothing is broken, everything is just redirection. \n" +
+        "However, you failed to hit anything that you intended. Try again.")
     console.log(req)
 })
 

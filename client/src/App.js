@@ -29,14 +29,14 @@ class App extends Component {
     //Players 
     
     //Quests
-    componentDidMount(){
-        axios.get("/quests").then(response => {
-            this.setState({
-                quests: response.data
-            })
-        })
-        .catch(err => console.log(err))
-    }
+    // componentDidMount(){
+    //     axios.get("/quests").then(response => {
+    //         this.setState({
+    //             quests: response.data
+    //         })
+    //     })
+    //     .catch(err => console.log(err))
+    // }
     //Players
     
     //Quests

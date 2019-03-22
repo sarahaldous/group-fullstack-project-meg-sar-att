@@ -1,5 +1,5 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 const playerSchema = new Schema ({
     name: {
@@ -18,6 +18,6 @@ const playerSchema = new Schema ({
     questLog: {
         type: Schema.Types.ObjectId
     }
-})
+});
 
-module.exports = mongoose.model("Player", playerSchema)
+module.exports = mongoose.model("Player", playerSchema);

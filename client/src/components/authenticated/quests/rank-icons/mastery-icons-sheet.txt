@@ -1,0 +1,22 @@
+//---ARRAY-------------------------------------------------------------//
+const categoryIcons = [
+    {
+        name: "grandmaster",
+        path: "client/src/components/authenticated/quests/rank-icons/grandmaster.png"
+    },{
+        name: "master",
+        path: "client/src/components/authenticated/quests/rank-icons/master.png"
+    },{
+        name: "journeyman",
+        path: "client/src/components/authenticated/quests/rank-icons/journeyman.png"
+    },{
+        name: "novice",
+        path: "client/src/components/authenticated/quests/rank-icons/novice.png"
+    }    
+]
+
+//---IMPORT-------------------------------------------------------------//
+import grandmasterIcon from "./src/components/authenticated/quests/rank-icons/grandmaster.png"
+import masterIcon from "./src/components/authenticated/quests/rank-icons/master.png"
+import journeymanIcon from "./src/components/authenticated/quests/rank-icons/journeyman.png"
+import noviceIcon from "./src/components/authenticated/quests/rank-icons/novice.png"

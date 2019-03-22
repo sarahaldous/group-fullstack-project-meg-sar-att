@@ -9,6 +9,6 @@ const TempNavBar = () => {
             <Link to="/admin">Admin</Link>    
         </nav>
     )
-}
+};
 
 export default TempNavBar

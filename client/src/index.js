@@ -11,4 +11,4 @@ ReactDOM.render(
             <App />
         </PlayerProvider>
     </BrowserRouter>, 
-document.getElementById('root'))
+document.getElementById('root'));

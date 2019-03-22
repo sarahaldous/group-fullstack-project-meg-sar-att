@@ -12,16 +12,16 @@ import Narwhal from '../../avatars/011-narwhal.png'
 
 class HomeDashboard extends Component {
     constructor(){
-        super()
+        super();
         this.state = {
             greeting: "",
         }
     }
 
     componentDidMount(){
-        const currentDate = new Date()
-        const currentHour = currentDate.getHours()
-        let greeting = ""
+        const currentDate = new Date();
+        const currentHour = currentDate.getHours();
+        let greeting = "";
         if (currentHour < 12) {
             greeting = "Good morning"
         } else if (currentHour > 12 && currentHour < 16) {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Switch, Route } from 'react-router'
+import { Switch, Route } from 'react-router-dom'
 // import axios from 'axios'
 
 //COMPONENTS
@@ -13,7 +13,7 @@ import axios from 'axios'
 
 class App extends Component {
     constructor(){
-        super()
+        super();
         this.state={
            
             title: "",
@@ -44,10 +44,10 @@ class App extends Component {
         this.setState({
             [e.target.name]: e.target.value 
         })
-    }
+    };
     //Quests
     handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
         const newQuest = {
             title: this.state.title,
             summary: this.state.summary,
@@ -58,7 +58,7 @@ class App extends Component {
             qLJourneyman: [],
             qLMaster: []
             
-        }
+        };
         axios.post("/quests", newQuest).then(response => {
             this.setState(prevState => ({
                 quests: [...prevState.quests, response.data],
@@ -73,27 +73,27 @@ class App extends Component {
             }))
              
         })
-    }
+    };
     // player
     
     // player
     handleDelete = (_id) => {
         axios.delete(`/players/${_id}`).then(response => {
-            alert(response.data)
+            alert(response.data);
             this.setState(prevState => ({
                 players: prevState.players.filter(player => player._id !== _id)
             }))
         })
-    }
+    };
     // quests
     handleDelete = (_id) => {
         axios.delete(`/quests/${_id}`).then(response => {
-            alert(response.data)
+            alert(response.data);
             this.setState(prevState => ({
                 quests: prevState.quests.filter(quest => quest._id !== _id)
             }))
         })
-    }
+    };
     render(){
         return (
             <div className="app-container">

@@ -19,6 +19,7 @@ body {
 body h1, h2, h3, h4, h5, h6 {
     font-family: 'Philosopher', sans-serif;
 }
+
 /* App.js */
 .app-container {
     width: 100vw;
@@ -75,7 +76,6 @@ body h1, h2, h3, h4, h5, h6 {
     background-color: rgb(103, 170, 170);
     padding: 10px;
     width: 100vw; 
-    
 }
 /* Placeholder.js */
 .placeholder-container {
@@ -163,16 +163,18 @@ body h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     right: 0;
     left: 0;    
+    z-index: 2;
+    /* raised z-index to 2 due to icons in questcard.js being at 1. Don't go lower. */
 }
-.navbar a{
-    text-decoration: none;
-    color: rgb(248, 248, 221);
-}
-.navbar img {
-    height: 5vh;
-    filter: invert(82%);
-    margin: 3px 35px;
-}
+    .navbar a{
+        text-decoration: none;
+        color: rgb(248, 248, 221);
+    }
+    .navbar img {
+        height: 5vh;
+        filter: invert(82%);
+        margin: 3px 35px;
+    }
 /* Authenticated.js */
 .authenticated-container {
     display: flex;
@@ -188,48 +190,48 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding-top: 4vh;
 }
-.home-dashboard > h3 {
-    font-weight: 500;
-}
+    .home-dashboard > h3 {
+        font-weight: 500;
+    }
 /* Post.js */
 .post {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1vh 5vw;
-    padding: 1vh 0vw;
+    padding: 1vh 0;
     border-bottom: solid rgba(0, 0, 0, 0.13) 1px;
 }
-.post:nth-child(1) {
-    border-top: solid rgba(0, 0, 0, 0.13) 1px;
-}
-.post > img {
-    height: 10vh;
-    width: calc(10vh);
-    padding: 1vh;
-    background-color: rgb(96, 98, 59);
-    border-radius: 20%;
-    /*todo check mismatch pattern below*/
-    filter: invert(90%) drop-shadow(rgba(0, 0, 0, 0.712) 2px 2px 3px);
-    margin-right: 4vw;
-}
-.post > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    width: 100%;
-}
-.status-updates {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2.5vh;
-    font-size: .8em;
-    line-height: 1.5em;
-    padding: 0vh 2vw;
-}
+    .post:nth-child(1) {
+        border-top: solid rgba(0, 0, 0, 0.13) 1px;
+    }
+    .post > img {
+        height: 10vh;
+        width: calc(10vh);
+        padding: 1vh;
+        background-color: rgb(96, 98, 59);
+        border-radius: 20%;
+        /*todo check mismatch pattern below*/
+        filter: invert(90%) drop-shadow(rgba(0, 0, 0, 0.712) 2px 2px 3px);
+        margin-right: 4vw;
+    }
+    .post > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+    }
+    .status-updates {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.5vh;
+        font-size: .8em;
+        line-height: 1.5em;
+        padding: 0 2vw;
+    }
 
 /* UserDashboard.js */
 .user-dashboard-container {
@@ -240,65 +242,65 @@ body h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     max-width: 700px;
 }
-.avatar-image-container {
-   height: 45vh;
-   width: 100vw;
-   max-width: calc(75vh);
-   background-image: url(https://sportsandthemind.com/wp-content/uploads/2014/04/Avatar-1.png);
-   background-size: cover;
-   background-position: center;
-   display: flex;
-   justify-content: flex-end;
-   align-items: flex-end;
-   padding: 10pt 20pt;
-}
-.avatar-image-container > h3 {
-    color: white;
-    font-weight: bolder;
-    text-shadow: black 2px 2px 2px;
-    text-transform: uppercase;
-}
-.user-dashboard-container > h1 {
-    font-size: 1.25em;
-    margin-top: 1vh;
-}
-.user-dashboard-container > h2 {
-    font-size: 1em;
-    font-variant: small-caps;
-    font-weight: lighter;
-}
-.player-skill-lvl-container {
-    padding-top: 10pt;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
+    .avatar-image-container {
+        height: 45vh;
+        width: 100vw;
+        max-width: calc(75vh);
+        background-image: url(https://sportsandthemind.com/wp-content/uploads/2014/04/Avatar-1.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 10pt 20pt;
+    }
+    .avatar-image-container > h3 {
+        color: white;
+        font-weight: bolder;
+        text-shadow: black 2px 2px 2px;
+        text-transform: uppercase;
+    }
+    .user-dashboard-container > h1 {
+        font-size: 1.25em;
+        margin-top: 1vh;
+    }
+    .user-dashboard-container > h2 {
+        font-size: 1em;
+        font-variant: small-caps;
+        font-weight: lighter;
+    }
+    .player-skill-lvl-container {
+        padding-top: 10pt;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
 /* PlayerLvl.js */
 .player-level {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
 }
-.player-level > p {
-    font-size: 15pt;
-    margin-bottom: 3.5pt;
-}
-.level-bar {
-    border: rgb(156, 3, 3) solid 1px;
-    width: 80vw;
-    height: 25pt;
-    margin-left: 10px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    padding: 2pt;
-}
-.progress-bar {
-    height: 19pt;
-    width: 50%;
-    background-color:  rgb(156, 3, 3);
-}
+    .player-level > p {
+        font-size: 15pt;
+        margin-bottom: 3.5pt;
+    }
+    .level-bar {
+        border: rgb(156, 3, 3) solid 1px;
+        width: 80vw;
+        height: 25pt;
+        margin-left: 10px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        padding: 2pt;
+    }
+    .progress-bar {
+        height: 19pt;
+        width: 50%;
+        background-color:  rgb(156, 3, 3);
+    }
 /* PlayerSkillLvl.js */
 .skill-bar-container {
     display: flex;
@@ -306,47 +308,55 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding: 1vw;
 }
-.skill-bar-container > p {
-    padding-right: 6pt;
-}
-.skill-bar {
-    border: rgb(103, 170, 170) solid 1px;
-    height: 15pt;
-    width: 20vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1.5px;
-}
-.skill-progress-meter {
-    background-color: rgb(103, 170, 170);
-    height: 10pt;
-    width: 50%;
-}
+    .skill-bar-container > p {
+        padding-right: 6pt;
+    }
+    .skill-bar {
+        border: rgb(103, 170, 170) solid 1px;
+        height: 15pt;
+        width: 20vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2px;
+    }
+    .skill-progress-meter {
+        background-color: rgb(103, 170, 170);
+        height: 10pt;
+        width: 50%;
+    }
 
 
 /*--- QUESTS SECTION ------------*/
 /* Quests.js */
-.quest-library-toggle {
-    background-color: rgb(156, 3, 3);
-    width: 100vw;
-    padding: 10px;
-}
-.current-quests-toggle {
-    background-color: rgb(253, 253, 194);
-    width: 100vw;
-    padding: 10px; 
-}
-.completed-quests-toggle {
-    background-color: rgb(103, 170, 170);
-    width: 100vw;
-    padding: 10px;
-}
+    .quest-library-toggle {
+        background-color: rgb(156, 3, 3);
+        width: 100vw;
+        padding: 20px 10px 10px 10px;
+        /* fix in place and shrink text to avoid forever scrolling */
+    }
+    .current-quests-toggle {
+        background-color: rgb(253, 253, 194);
+        /* temp color for visibility until style fix in toggle*/
+        /* background-color: rgb(218, 181, 113); */
+        width: 100vw;
+        padding: 10px; 
+    }
+    .completed-quests-toggle {
+        background-color: rgb(103, 170, 170);
+        width: 100vw;
+        padding: 10px;
+        margin-bottom: 10vh;
+        /* fix in place and shrink text to avoid forever scrolling */
+    }
 /* QuestLibrary.js */
 
-/* CompletedQuets.js */
+/* CompletedQuests.js */
+
 /* CurrentQuests.js */
+
 /* QuestList.js */
+
 /* QuestCard.js */
 .quest-card {
     width: 100%;
@@ -361,25 +371,175 @@ body h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
     padding: 0px 10px 15px 10px;
 }
-.quest-card > h3 {
-    font-size: 1em;
-    margin-top: 15px;
-}
-.quest-card > iframe {
-    width: 90vw;
-    height: calc(60vw);
-    display: flex;
-    align-self: center;
-    margin-top: 10px;
-}
-.quest-card > p {
-    font-size: 0.75em;
-    text-align: left;
-    margin-top: 10px;
-}
-.quest-card > .reward-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
+    /* video title */
+        .quest-card h3 {
+            font-size: 1em;
+            text-align: center;
+            margin-top: 15px;
+            padding: 1.5vh 0vw;
+            background-color: rgba(255, 255, 255, 0.678);
+            width: 90vw;
+            border-radius: 15px 15px 0px 0px;
+            align-self: center;
+        }
+    /* video */
+        .quest-card > iframe {
+            width: 90vw;
+            height: calc(60vw);
+            display: flex;
+            align-self: center;
+            /* margin-top: 10px; */
+            border: white solid 1px;
+        }
+    /* video description */
+        .quest-card > p {
+            font-size: 0.75em;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.219);
+            border: white solid 1px;
+            border-top: none;
+            border-radius: 0px 0px 15px 15px;
+            padding: 5pt 8pt 9pt 8pt;
+            width: 90vw;
+            display: flex;
+            align-self: center;
+            margin-bottom: 1.5vh;
+        }
+    /* quest rewards info */
+        .reward-container {
+            display: grid;
+            grid-template-columns: 32% 32% 36%;
+            margin-bottom: 1.5vh;
+            padding: 5pt;
+            background-color: rgba(255, 255, 255, 0.219);
+            border: white solid 1px;
+            border-radius: 15px;
+        }
+        .xp {
+            grid-column: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-self: center;
+            border-right: solid white 1px;
+        }
+        .mastery-lvl {
+            grid-column: 2;
+            height: 8.5vh;
+            filter: invert(5%);
+            display: flex;
+            justify-self: center;
+            align-self: center;
+        }
+        .skill-points {
+            grid-column: 3;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-left: solid white 1px;
+            padding-left: 10px;
+        }
+        .skill-points div {
+            grid-column: 1;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-self: center;
+        }
+        .skill-points img {
+            grid-column: 2;
+            height: 8vh;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+            filter: invert(5%);
+        }
+    /* quest tree info */
+        .quest-tree-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 15pt auto;
+            margin-bottom: 1.5vh;
+            background-color: rgba(255, 255, 255, 0.219);
+            border: white solid 1px;
+            border-radius: 15px;
+        }
+        .quest-tree-container h4 {
+            font-size: 12pt;
+            padding-top: 2pt;
+            height: 18pt;
+            background-color: rgba(255, 255, 255, 0.472);
+        }
+        .quest-tree-container div {
+            padding: 3pt 6pt;
+        }
+        .quest-tree-container p {
+            font-size: 10pt;
+            text-align: left;
+            margin: 5pt 0pt;
+        }
+        .required-quest-header {
+            grid-column: 1;
+            grid-row: 1;
+            border-right: solid 1px white;
+            border-top-left-radius: 15px;
+        }
+        .pre-req-quests {
+            grid-column: 1;
+            grid-row: 2;
+            border-right: solid 1px white;
+        }
+        .unlocks-quest-header {
+            grid-column: 2;
+            grid-row: 1;
+            border-top-right-radius: 15px;
+        }
+        .next-unlocked-quests {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .quest-control-panel {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 1.5vh;
+        }
+    /* quest control panel */
+        .quest-control-panel > button {
+            background-color: rgba(255, 255, 255, 0.383);
+            box-shadow: rgba(0, 0, 0, 0.521) 2px 2px 2px;
+            border-radius: 15px;
+            font-size: 8pt;
+            padding: 1vh 2vw;
+        }
+    /* community progress log */
+        .community-progress-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .community-progress-container > img {
+            background-color: rgb(211, 212, 212);
+            border: rgba(5, 5, 5, 0.801) 3px solid;
+            border-radius: 100%;
+            box-shadow: rgba(0, 0, 0, 0.521) 2px 2px 2px;
+            width: calc(10vh);
+            height: 10vh;
+            padding: 1.25vh;
+            margin-left: calc(-5vh);
+            z-index: 1;
+        }
+        .community-progress-container > img:nth-child(1) {
+            margin-left: 0;
+        }
+        .community-progress-container > p {
+            font-size: 10pt;
+            font-style: italic;
+            text-align: left;
+            padding: 2vw 2vw 2vw 20vw;
+            margin-left: -18vw;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.219);
+            border-radius: 0px 15px 15px 0px;
+        }

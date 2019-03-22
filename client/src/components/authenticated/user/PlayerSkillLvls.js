@@ -10,6 +10,6 @@ const PlayerSkillLvls = () => {
         </div>
         
     )
-}
+};
 
 export default PlayerSkillLvls

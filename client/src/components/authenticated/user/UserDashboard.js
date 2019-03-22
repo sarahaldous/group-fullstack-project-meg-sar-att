@@ -25,6 +25,6 @@ const UserDashboard = () => {
             </div>
         </section>
     )
-}
+};
 
 export default UserDashboard

@@ -359,9 +359,9 @@ body h1, h2, h3, h4, h5, h6 {
         /* fix in place and shrink text to avoid forever scrolling */
     }
     .current-quests-toggle {
-        /* background-color: rgb(253, 253, 194); */
+        background-color: rgb(253, 253, 194);
         /* temp color for visibility until style fix in toggle*/
-        background-color: rgb(218, 181, 113);
+        /* background-color: rgb(218, 181, 113); */
         width: 100vw;
         padding: 10px; 
     }

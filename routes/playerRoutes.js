@@ -5,6 +5,7 @@ const Player = require("../models/playerModel.js");
 // Get all players
 playerRouter.route("/")
     .get((req, res, next) => {
+        console.log("Players GET")
         Player.find((err, players) => {
             if(err){
                 res.status(500);

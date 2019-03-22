@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a3b85c-085c-4008-823d-563b760ef07d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/attilaujvari.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/attilaujvari.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Placeholder.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Placeholder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/context/PlayerProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/PlayerProvider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/playerModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/playerModel.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,55 +26,90 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/context/PlayerProvider.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#38#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/App.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#0#38#0" expanded="true" />
-                    <element signature="e#212#277#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="261">
-                  <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.5678756">
+          <split-first>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="208">
+                      <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/user/PlayerSkillLvls.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="221">
+                      <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/models/playerModel.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="80">
+                      <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/src/App.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="289">
+                      <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+                      <folding>
+                        <element signature="e#0#38#0" expanded="true" />
+                        <element signature="e#216#281#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/src/style.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="527">
+                      <caret line="326" column="19" lean-forward="true" selection-start-line="326" selection-start-column="19" selection-end-line="326" selection-end-column="19" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/src/index.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="34">
+                      <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="115">
+                      <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+                      <folding>
+                        <element signature="e#0#38#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
@@ -84,10 +119,27 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
+            <entry file="file://$PROJECT_DIR$/server.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+                <state relative-caret-position="476">
+                  <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/quests/category-icons/category-icons-sheet.txt">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/context/PlayerProvider.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="346">
+                  <caret line="27" selection-start-line="27" selection-end-line="29" selection-end-column="14" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -113,7 +165,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="A-wed-night" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -126,21 +178,21 @@
         <option value="$PROJECT_DIR$/models/player.js" />
         <option value="$PROJECT_DIR$/routes/adultingRoutes.js" />
         <option value="$PROJECT_DIR$/API_readme.md" />
-        <option value="$PROJECT_DIR$/models/playerModel.js" />
         <option value="$PROJECT_DIR$/models/questModel.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/routes/playerRoutes.js" />
         <option value="$PROJECT_DIR$/routes/questRoutes.js" />
-        <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js" />
         <option value="$PROJECT_DIR$/client/src/components/Placeholder.js" />
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/src/index.js" />
-        <option value="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" />
-        <option value="$PROJECT_DIR$/client/src/context/PlayerProvider.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/client/src/style.css" />
         <option value="$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js" />
+        <option value="$PROJECT_DIR$/client/src/App.js" />
+        <option value="$PROJECT_DIR$/client/src/context/PlayerProvider.js" />
+        <option value="$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js" />
+        <option value="$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js" />
+        <option value="$PROJECT_DIR$/client/src/style.css" />
+        <option value="$PROJECT_DIR$/models/playerModel.js" />
       </list>
     </option>
   </component>
@@ -150,10 +202,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="45" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="46" />
     <option name="y" value="23" />
-    <option name="width" value="828" />
+    <option name="width" value="1580" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -168,59 +220,82 @@
         <subPane>
           <expand>
             <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated" type="462c0819:PsiDirectoryNode" />
+              <item name="quests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated" type="462c0819:PsiDirectoryNode" />
+              <item name="quests" type="462c0819:PsiDirectoryNode" />
+              <item name="category-icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticated" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="loading-page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="context" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
+              <item name="group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="group" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="group-fullstack-project-meg-sar-att" type="b2602c69:ProjectViewProjectNode" />
-              <item name="group-fullstack-project-meg-sar-att" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,6 +339,8 @@
       <workItem from="1553018983763" duration="1207000" />
       <workItem from="1553106849518" duration="3746000" />
       <workItem from="1553218570071" duration="6848000" />
+      <workItem from="1553269459883" duration="33000" />
+      <workItem from="1553269501795" duration="10882000" />
     </task>
     <task id="LOCAL-00001" summary="Tue morning. Pre-route restructure">
       <created>1553010800353</created>
@@ -283,13 +360,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26498000" />
+    <option name="totallyTimeSpent" value="37413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="23" width="1874" height="1057" extended-state="6" />
-    <editor active="true" />
+    <frame x="46" y="23" width="1874" height="1057" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916527" visible="true" weight="0.18286026" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916527" visible="true" weight="0.1566594" />
       <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.27485928" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -300,34 +376,33 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4990619" weight="0.32953367" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3792746" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4990619" visible="true" weight="0.4746114" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.24974093" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50093806" side_tool="true" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32899868" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916527" visible="true" weight="0.11851447" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916527" visible="true" weight="0.12827511" />
       <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.27485928" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32953367" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4990619" weight="0.32953367" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.22279793" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50093806" side_tool="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4990619" weight="0.4746114" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.24974093" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50093806" side_tool="true" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32899868" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,11 +464,6 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_TABS">
-      <set>
-        <option value="1" />
-      </set>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -415,13 +485,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/playerModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/questModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -457,53 +520,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../assignments/group-fullstack-project-meg-sar-att/client/src/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/assignments/group-fullstack-project-meg-sar-att/client/src/style.css" />
     <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/quests/CurrentQuests.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/quests/QuestLibrary.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../assignments/group-fullstack-project-meg-sar-att/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../assignments/group-fullstack-project-meg-sar-att/client/src/components/authenticated/user/UserDashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#89#127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../assignments/group-fullstack-project-meg-sar-att/client/src/components/unauthenticated/Unauthenticated.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../assignments/group-fullstack-project-meg-sar-att/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/assignments/group-fullstack-project-meg-sar-att/client/src/index.js" />
+    <entry file="file://$USER_HOME$/assignments/group-fullstack-project-meg-sar-att/client/src/components/authenticated/user/UserDashboard.js" />
+    <entry file="file://$USER_HOME$/assignments/group-fullstack-project-meg-sar-att/client/src/components/unauthenticated/Unauthenticated.js" />
+    <entry file="file://$USER_HOME$/assignments/group-fullstack-project-meg-sar-att/client/src/App.js" />
     <entry file="file://$PROJECT_DIR$/API_readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -514,43 +541,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#212#277#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/quests/QuestCard.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/quests/CompletedQuests.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/unauthenticated/Unauthenticated.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -565,17 +560,17 @@
     <entry file="file://$PROJECT_DIR$/client/src/components/unauthenticated/Login.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Placeholder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="6" column="119" selection-start-line="6" selection-start-column="119" selection-end-line="6" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -586,27 +581,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/context/PlayerProvider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="346">
+          <caret line="27" selection-start-line="27" selection-end-line="29" selection-end-column="14" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/style.css">
+    <entry file="file://$PROJECT_DIR$/client/src/components/admin/AdminDashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        <state relative-caret-position="115">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/loading-page/LoadingPage.js">
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        <state relative-caret-position="289">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#216#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="326" column="19" lean-forward="true" selection-start-line="326" selection-start-column="19" selection-end-line="326" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/user/UserDashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/user/PlayerSkillLvls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/authenticated/quests/category-icons/category-icons-sheet.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/playerModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>

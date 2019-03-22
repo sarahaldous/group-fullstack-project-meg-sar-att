@@ -17,6 +17,31 @@ const playerSchema = new Schema ({
     //  An array of Quest IDs and completed qualification levels
     questLog: {
         type: Schema.Types.ObjectId
+    },
+    //  Skill categories
+    jobbing: {
+        type: Number
+    },
+    moneys: {
+        type: Number
+    },
+    doctoring: {
+        type: Number
+    },
+    housing: {
+        type: Number
+    },
+    foodsies: {
+        type: Number
+    },
+    peopling: {
+        type: Number
+    },
+    goingPlaces: {
+        type: Number
+    },
+    cleaning: {
+        type: Number
     }
 });
 

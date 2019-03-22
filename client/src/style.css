@@ -246,9 +246,10 @@ body h1, h2, h3, h4, h5, h6 {
         height: 45vh;
         width: 100vw;
         max-width: calc(75vh);
-        background-image: url(https://sportsandthemind.com/wp-content/uploads/2014/04/Avatar-1.png);
-        background-size: cover;
+        /*background-image: url(https://sportsandthemind.com/wp-content/uploads/2014/04/Avatar-1.png);*/
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;

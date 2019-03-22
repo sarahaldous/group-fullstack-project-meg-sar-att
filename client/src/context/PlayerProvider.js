@@ -11,37 +11,64 @@ class PlayerProvider extends Component{
             avatar: "",
             level: 0,
             questLog: [],
-            _id: ""
+            _id: "",
+            players: [],
+            togPlayerData: false,
+            togQuestData: false
         }
     }
     handleChange = e => {
         this.setState({
-            [e.target.name]: e.target.value 
+            [e.target.name]: e.target.value
         })
     }
     handleSubmit = e => {
-        console.log(e)
         e.preventDefault()
         this.getPlayerData(this.state._id)
+        // this.setState( prevState => ({
+        //     togPlayerData : !prevState.togPlayerData
+        // }))
+
+    }
+    togglerPlayerData = () => {
+        this.setState(prevState => ({
+            togPlayerData: !prevState.togPlayerData
+        }))
+    }
+    togglerQuestData = () => {
+        this.setState(prevState => ({
+            togQuestData: !prevState.togQuestData
+        }))
     }
 
     getPlayerData = (_id) => {
         console.log(_id)
         axios.get(`/players/${_id}`).then(res => {
-
             console.log(res)
-            this.setState({
-                name: res.data.name
-            })
+            _id.length > 0
+                ? this.setState({
+                    name: res.data.name,
+                    avatar: res.data.avatar,
+                    level: res.data.level,
+                    questLog: res.data.questLog,
+                    _id: res.data._id
+                })
+                : this.setState({
+                players: res.data
+                })
+
         })
     }
 
     render(){
+        console.log(this.state)
         return (
             <PlayerContext.Provider
                 value={{...this.state,
                     handleChange: this.handleChange,
-                    handleSubmit: this.handleSubmit
+                    handleSubmit: this.handleSubmit,
+                    togglerPlayerData: this.togglerPlayerData,
+                    togglerQuestData: this.togglerQuestData
                 }}>
                 {this.props.children}
             </PlayerContext.Provider>

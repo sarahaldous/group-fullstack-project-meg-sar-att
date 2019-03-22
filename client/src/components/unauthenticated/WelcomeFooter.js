@@ -9,6 +9,6 @@ const WelcomeFooter = () => {
             <Link to="/welcome/signup">Sign Up</Link>
         </footer>
     )
-}
+};
 
 export default WelcomeFooter

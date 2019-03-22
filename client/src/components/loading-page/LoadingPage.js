@@ -15,6 +15,6 @@ const LoadingPage = () => {
             </div>
         </div>
     )
-}
+};
 
 export default LoadingPage

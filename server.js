@@ -21,7 +21,10 @@ app.use("*", (req, res) =>{
 
 
 // DB connect
-mongoose.connect("mongodb://localhost:27017/adultingDB", {useNewUrlParser: true}, () => {
+mongoose.connect("mongodb://localhost:27017/adultingDB", {useNewUrlParser: true}, (e) => {
+    if (e) {
+        throw e
+    }
     console.log("[o] Connected to the DB")
 })
 

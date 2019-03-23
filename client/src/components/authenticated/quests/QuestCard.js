@@ -37,7 +37,7 @@ class QuestCard extends Component {
         const skillPoints = 35
 
         this.setState ({
-            questCateogry: category,
+            questCategory: category,
             questTitle: updateTitle,
             questVideoUrl: videoUrl,
             questDescription: descriptionTxt,
@@ -52,19 +52,20 @@ class QuestCard extends Component {
         return (
             <div className="quest-card">
                 <h3>{this.state.questTitle}</h3>
-                {/* <iframe 
+                <iframe 
                     title={this.state.questTitle}
                     src={this.state.questVideoUrl}
                     frameBorder="0" 
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                     allowFullScreen
                     className="quest-card-video"
-                /> */}
+                />
                 <p>{this.state.questDescription}</p>
                 <QuestCardRewardsContainer 
                     questRewardXP={this.state.questRewardXP} 
                     questRewardMastery={this.state.questRewardMastery} 
                     questRewardSP={this.state.questRewardSP}
+                    questCategory={this.state.questCategory}
                 />
                 <div className="quest-tree-container">
                     <h4 className="required-quest-header">Required Quests</h4>

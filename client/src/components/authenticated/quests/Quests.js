@@ -12,6 +12,17 @@ class Quests extends Component {
             toggle3: false
             }
         }
+
+        noToggleStyles = {
+            height: 0,
+            paddingBottom: 0
+        }
+
+        toggle3Styles = {
+            height: "56.8vh",
+            paddingBottom: "5vh"
+        }
+
         toggler1 = () => {
             console.log("toggle 1 hit")
             this.setState(prevState =>({
@@ -20,6 +31,7 @@ class Quests extends Component {
                 toggle3: false
             }))
         }
+
         toggler2 = () => {
             console.log("toggle 2 hit")
             this.setState({
@@ -28,6 +40,7 @@ class Quests extends Component {
                 toggle3: false
             })
         }
+
         toggler3 = () => {
             console.log("toggle 3 hit")
             this.setState(prevState => ({
@@ -36,6 +49,7 @@ class Quests extends Component {
                 toggle3: !prevState.toggle3
             }))
         }
+
         render() {
             
                 return (

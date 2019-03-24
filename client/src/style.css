@@ -418,6 +418,8 @@ body h1, h2, h3, h4, h5, h6 {
 /* CurrentQuests.js */
     .current-quests-container {
         box-shadow: inset rgba(0, 0, 0, 0.294) 0px 3px 20px;
+        display: flex;
+        justify-content: center;
     }
 /* CompletedQuests.js */
     .completed-quests-container {
@@ -432,20 +434,27 @@ body h1, h2, h3, h4, h5, h6 {
         /* margin-bottom: 30vh; */
         overflow-y: scroll;
         height: 100%;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        
     }
 /* QuestCard.js */
     .quest-card {
         width: 100%;
+        max-width: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         color: black;
-        border-top: rgba(103, 170, 170, 0.432) solid 1px;
-        border-bottom: rgba(103, 170, 170, 0.432) solid 1px;
+        /* border-top: rgba(103, 170, 170, 0.432) solid 1px;
+        border-bottom: rgba(103, 170, 170, 0.432) solid 1px; */
         margin-top: 20px;
         margin-bottom: 20px;
-        padding: 0px 10px 15px 10px;
     }
     /* video title */
         .quest-card h3 {
@@ -455,13 +464,16 @@ body h1, h2, h3, h4, h5, h6 {
             padding: 1.5vh 0vw;
             background-color: rgba(255, 255, 255, 0.678);
             width: 90vw;
+            max-width: 400px;
             border-radius: 15px 15px 0px 0px;
             align-self: center;
         }
     /* video */
         .quest-card > iframe {
             width: 90vw;
+            max-width: 400px;
             height: calc(60vw);
+            max-height: 300px;
             display: flex;
             align-self: center;
             /* margin-top: 10px; */
@@ -476,20 +488,25 @@ body h1, h2, h3, h4, h5, h6 {
             border-top: none;
             border-radius: 0px 0px 15px 15px;
             padding: 5pt 8pt 9pt 8pt;
-            width: 90vw;
             display: flex;
             align-self: center;
+            justify-content: center;
             margin-bottom: 1.5vh;
+            width: 90vw;
+            max-width: 400px;
+
         }
     /* quest rewards info */
         .reward-container {
             display: grid;
             grid-template-columns: 32% 32% 36%;
-            margin-bottom: 1.5vh;
+            margin-bottom: 1.5vh 0vw;
             padding: 5pt;
             background-color: rgba(255, 255, 255, 0.219);
             border: white solid 1px;
             border-radius: 15px;
+            width: 90vw;
+            max-width: 400px;
         }
         .xp {
             grid-column: 1;
@@ -531,69 +548,34 @@ body h1, h2, h3, h4, h5, h6 {
             align-self: center;
             filter: invert(5%);
         }
-    /* quest tree info */
-        .quest-tree-container {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 15pt auto;
-            margin-bottom: 1.5vh;
-            background-color: rgba(255, 255, 255, 0.219);
-            border: white solid 1px;
-            border-radius: 15px;
-        }
-        .quest-tree-container h4 {
-            font-size: 12pt;
-            padding-top: 2pt;
-            height: 18pt;
-            background-color: rgba(255, 255, 255, 0.472);
-        }
-        .quest-tree-container div {
-            padding: 3pt 6pt;
-        }
-        .quest-tree-container p {
-            font-size: 10pt;
-            text-align: left;
-            margin: 5pt 0pt;
-        }
-        .required-quest-header {
-            grid-column: 1;
-            grid-row: 1;
-            border-right: solid 1px white;
-            border-top-left-radius: 15px;
-        }
-        .pre-req-quests {
-            grid-column: 1;
-            grid-row: 2;
-            border-right: solid 1px white;
-        }
-        .unlocks-quest-header {
-            grid-column: 2;
-            grid-row: 1;
-            border-top-right-radius: 15px;
-        }
-        .next-unlocked-quests {
-            grid-column: 2;
-            grid-row: 2;
-        }
-        .quest-control-panel {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin-bottom: 1.5vh;
-        }
+    
     /* quest control panel */
+        .quest-control-panel {
+            width: 90vw;
+            max-width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10pt;
+        }
         .quest-control-panel > button {
             background-color: rgba(255, 255, 255, 0.383);
             box-shadow: rgba(0, 0, 0, 0.521) 2px 2px 2px;
             border-radius: 15px;
             font-size: 8pt;
             padding: 1vh 2vw;
+            margin: 6pt 3pt 3pt 3pt;
+            width: 31%;
+            height: 40pt;
         }
     /* community progress log */
         .community-progress-container {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            width: 90vw;
+            max-width: 400px;
+            margin-bottom: 10pt;
         }
         .community-progress-container > img {
             background-color: rgb(211, 212, 212);
@@ -613,9 +595,15 @@ body h1, h2, h3, h4, h5, h6 {
             font-size: 10pt;
             font-style: italic;
             text-align: left;
-            padding: 2vw 2vw 2vw 20vw;
-            margin-left: -18vw;
+            padding: 10pt 1vw 10pt 6vw;
+            margin-left: -5vw;
             color: black;
             background-color: rgba(255, 255, 255, 0.219);
             border-radius: 0px 15px 15px 0px;
         }
+
+@media screen and (min-width: 900px) {
+    .quest-card {
+        margin: 0vw 1vw 0vw 1vw;
+    }
+}

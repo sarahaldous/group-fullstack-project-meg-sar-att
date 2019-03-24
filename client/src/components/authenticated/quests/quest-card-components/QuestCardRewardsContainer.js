@@ -52,6 +52,7 @@ class QuestCardRewardsContainer extends Component {
                 break
             case "housing":
                 return housingIcon
+
                 break
             case "foodsies":
                 return foodIcon
@@ -72,7 +73,7 @@ class QuestCardRewardsContainer extends Component {
                    <h2>{this.props.questRewardXP}</h2>
                    <p>XP</p>
                </div>
-               <img className="mastery-lvl" alt="mastery-lvl" src={mastery()}/>
+               <img className="mastery-lvl" alt="recommended level" src={mastery()}/>
                <div className="skill-points">
                    <div>
                        <h2>{this.props.questRewardSP}</h2>

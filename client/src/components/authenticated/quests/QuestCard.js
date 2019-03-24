@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 //COMPONENTS
 import QuestCardRewardsContainer from "./quest-card-components/QuestCardRewardsContainer.js"
+import QuestControlPanel from "./quest-card-components/QuestControlPanel.js"
 
 //IMAGES
 import lockedIcon from "./lock.png"
@@ -10,6 +11,7 @@ import starIcon from "./star.png"
 import foxImg from "../../avatars/020-fox.png" //temporary hardcoded image
 import charonImg from "../../avatars/022-charon.png" //temporary hardcoded image
 import golemImg from "../../avatars/023-golem.png" //temporary hardcoded image
+import QuestControlPanel from './quest-card-components/QuestControlPanel.js';
 
 
 class QuestCard extends Component {
@@ -67,29 +69,12 @@ class QuestCard extends Component {
                     questRewardSP={this.state.questRewardSP}
                     questCategory={this.state.questCategory}
                 />
-                <div className="quest-tree-container">
-                    <h4 className="required-quest-header">Required Quests</h4>
-                    <div className="pre-req-quests">
-                        <p>Reading clothing tags</p>
-                        <p>Sorting by color and weight</p>
-                        <p>Washer/Dryer maintence</p>
-                    </div>
-                    <h4 className="unlocks-quest-header">Unlocks</h4>
-                    <div className="next-unlocked-quests">
-                        <p>None</p>
-                    </div>
-                </div>
-                <div className="quest-control-panel">
-                    <button>Add Quest</button>
-                    <button>Remove Quest</button>
-                    <button>Complete Quest</button>
-                    {/* 
-                        add a toggle between these
-                        Add should be visible only on the new quests
-                        Remove and Complete should only be visible on the active quests
-                        None should show on the complete quests                
-                    */}
-                </div>
+                <QuestControlPanel
+                    questID={this.state.questID}
+                    questPending={this.state.questPending}
+                    questComplete={this.state.questComplete}
+                    questValidationPhoto={this.state.questValidationPhoto}
+                />
                 <div className="community-progress-container">
                     <img alt="other-player" src={foxImg}/>
                     <img alt="other-player" src={charonImg}/>

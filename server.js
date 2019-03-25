@@ -12,6 +12,7 @@ app.use(morgan('dev'))
 app.use('/adulting', require('./routes/adultingRoutes.js'))
 app.use("/players", require("./routes/playerRoutes.js"))
 app.use("/quests", require("./routes/questRoutes.js"))
+app.use("/site/user", require("./routes/playerRoutes.js"))
 app.use("*", (req, res) =>{
     res.send("Error 404? \n" +
         "Nothing is broken, everything is just redirection. \n" +

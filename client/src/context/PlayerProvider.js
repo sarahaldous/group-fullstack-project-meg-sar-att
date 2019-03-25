@@ -6,10 +6,9 @@ const PlayerContext = React.createContext()
 class PlayerProvider extends Component{
     constructor(props){
         super(props)
-        this.state = {
+        this.state={
             name: "",
             avatar: "",
-            title: "",
             level: 0,
             questLog: [],
             _id: "",
@@ -18,27 +17,24 @@ class PlayerProvider extends Component{
             togQuestData: false
         }
     }
-
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
-
     handleSubmit = e => {
         e.preventDefault()
         this.getPlayerData(this.state._id)
         // this.setState( prevState => ({
         //     togPlayerData : !prevState.togPlayerData
         // }))
-    }
 
+    }
     togglerPlayerData = () => {
         this.setState(prevState => ({
             togPlayerData: !prevState.togPlayerData
         }))
     }
-
     togglerQuestData = () => {
         this.setState(prevState => ({
             togQuestData: !prevState.togQuestData
@@ -46,22 +42,21 @@ class PlayerProvider extends Component{
     }
 
     getPlayerData = (_id) => {
-        console.log(_id)
-        axios.get(`/players/${_id}`).then(res => {
-            console.log(res)
-            _id.length > 0
-                ? this.setState({
-                    name: res.data.name,
-                    avatar: res.data.avatar,
-                    title: res.data.name,
-                    level: res.data.level,
-                    questLog: res.data.questLog,
-                    _id: res.data._id
-                })
-                : this.setState({
-                    players: res.data
-                })
+    typeof _id === 'undefined'
+        ? axios.get(`/players/`).then(res => {
+        this.setState({
+            players: res.data
         })
+    })
+        : axios.get(`/players/${_id}`).then(res => {
+        this.setState({
+            name: res.data.name,
+            avatar: res.data.avatar,
+            level: res.data.level,
+            questLog: res.data.questLog,
+            _id: res.data._id
+        })
+    })
     }
 
     render(){
@@ -72,9 +67,9 @@ class PlayerProvider extends Component{
                     handleChange: this.handleChange,
                     handleSubmit: this.handleSubmit,
                     togglerPlayerData: this.togglerPlayerData,
-                    togglerQuestData: this.togglerQuestData
-                }}
-            >
+                    togglerQuestData: this.togglerQuestData,
+                    getPlayerData: this.getPlayerData
+                }}>
                 {this.props.children}
             </PlayerContext.Provider>
         )
@@ -86,5 +81,4 @@ export const withPlayer = C => props => (
         {value => <C {...props} {...value} />}
     </PlayerContext.Consumer>
 )
-
 export default PlayerProvider

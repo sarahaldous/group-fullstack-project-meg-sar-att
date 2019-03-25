@@ -17,8 +17,12 @@ const playerSchema = new Schema ({
         type: Number,
         default: 0
     },
-    //  An array of Quest IDs and completed qualification levels
+    //  An array of Quest IDs completed
     questLog: {
+        type: Schema.Types.ObjectId
+    },
+    // An array of Quest IDs currently selected
+    questCurrent:{
         type: Schema.Types.ObjectId
     },
     //  Skill categories

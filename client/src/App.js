@@ -26,18 +26,6 @@ class App extends Component {
             qLMaster: []
         }
     }
-    //Players 
-    
-    //Quests
-    // componentDidMount(){
-    //     axios.get("/quests").then(response => {
-    //         this.setState({
-    //             quests: response.data
-    //         })
-    //     })
-    //     .catch(err => console.log(err))
-    // }
-    //Players
 
     //Quests
     handleSubmit = e => {
@@ -91,6 +79,7 @@ class App extends Component {
         return (
             <div className="app-container">
                 <TempNavBar/>
+                <br/>
                 <Switch>
                     <Route exact path="/" component={LoadingPage}/>
                     <Route path="/welcome" component={Unauthenticated}/>

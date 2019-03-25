@@ -11,6 +11,7 @@ class PlayerProvider extends Component{
             avatar: "",
             level: 0,
             questLog: [],
+            questCurrent: [],
             _id: "",
             players: [],
             togPlayerData: false,
@@ -54,6 +55,7 @@ class PlayerProvider extends Component{
             avatar: res.data.avatar,
             level: res.data.level,
             questLog: res.data.questLog,
+            questCurrent: res.data.questCurrent,
             _id: res.data._id
         })
     })

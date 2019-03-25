@@ -11,10 +11,12 @@ const questSchema = new Schema({
     },
     description:{
         type: String,
-        required: true
     },
     category: {
         type: Array
+    },
+    description: {
+        type: String
     },
     youtubeEmbed: {
         type: String

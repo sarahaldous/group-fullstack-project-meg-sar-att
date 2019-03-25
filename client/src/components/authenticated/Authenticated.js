@@ -9,10 +9,6 @@ import {withPlayer} from "../../context/PlayerProvider.js";
 
 
 class Authenticated extends Component {
-    constructor(){
-        super()
-    }
-
     componentDidMount(){
         const idCaller = this.props.location.pathname.slice(11)
         this.props.getPlayerData(idCaller)

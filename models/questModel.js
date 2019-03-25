@@ -25,6 +25,12 @@ const questSchema = new Schema({
     recommendedMLvl: {
         type: String
     },
+    xp: {
+        type: Number
+    },
+    sp: {
+        type: Number
+    },
     qLNovice: {
         type: String,
         playerIDs: Schema.Types.ObjectId

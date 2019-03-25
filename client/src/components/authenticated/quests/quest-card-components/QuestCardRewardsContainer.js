@@ -18,10 +18,9 @@ import React, {Component} from 'react'
 
 
 class QuestCardRewardsContainer extends Component {
-   render(){
-       console.log(this.props.questRewardMastery)
+   render(props){
        const mastery = () => {
-           switch(this.props.questRewardMastery){
+           switch(this.props.questRecommendedMLvl){
                 case "novice":
                     return noviceIcon
                 case "journeyman":
@@ -31,7 +30,8 @@ class QuestCardRewardsContainer extends Component {
                 case "grandmaster":
                     return grandMasterIcon
                 default: 
-                    return console.log("Warning: Failed to identify mastery lvl.")
+                    return ""
+                    // return console.log("Warning: Failed to identify mastery lvl.")
             }
         }
 
@@ -54,11 +54,10 @@ class QuestCardRewardsContainer extends Component {
                 case "goingPlaces":
                     return transportationIcon
                 default: 
-                    return console.log("Warning: Failed to identify quest categories.")
+                    // return console.log("Warning: Failed to identify quest categories.")
+                    return ""
             }
         }
-       console.log(category())
-       console.log(mastery())
 
        return (
            <div className="reward-container">

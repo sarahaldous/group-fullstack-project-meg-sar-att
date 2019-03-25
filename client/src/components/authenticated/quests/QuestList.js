@@ -4,18 +4,32 @@ import React, {Component} from 'react'
 import QuestCard from './QuestCard.js'
 
 class QuestList extends Component {
-    constructor(){
-        super()
-        this.state = {
-            sortedQuests: []
-        }
-    }
+    render(props){
+        console.log(`Quest Card has recieved ${this.props.questStatus} Quest Data:`)
+        console.log(this.props.listOfQuests)
+        const mappedQuests = this.props.listOfQuests.map((quest, i) => {
+            console.log(`Mapping to quest card ${i}:`)
+            console.log(quest)
+            console.log(quest.title)
 
-    //TODO replace hardcoded <QuestCard/>s with map to pull ALL quests
-    render(){
+            return  <QuestCard
+                        status={this.props.questStatus}
+                        key={i}
+                        title={quest.title}
+                        summary={quest.summary}
+                        category={quest.category}
+                        youtubeEmbed={quest.youtubeEmbed}
+                        description={quest.description}
+                        recommendedMLvl={quest.recommendedMLvl}
+                        xp={quest.xp}
+                        sp={quest.sp}
+                        _id={quest._id}
+                    />
+        })
+
         return (
             <div className="quest-list">
-                <QuestCard/>
+                {mappedQuests}
             </div>
         )
     }

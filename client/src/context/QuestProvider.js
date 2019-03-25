@@ -15,9 +15,12 @@ class QuestProvider extends Component {
             youtubeEmbed: "",
             imageUrl: "",
             recommendedMLvl: "",
+            xp: 0,
+            sp: 0,
             qLNovice: "",
             qLJourneyman: "",
-            qLMasterqLGrandMaster: ""
+            qLMaster: "",
+            qLGrandMaster: ""
         }
     }
 
@@ -59,9 +62,12 @@ class QuestProvider extends Component {
                     youtubeEmbed: res.data.youtubeEmbed,
                     imageUrl: res.data.imageUrl,
                     recommendedMLvl: res.data.recommendedMLvl,
+                    xp: res.data.xp,
+                    sp: res.data.sp,
                     qLNovice: res.data.qLNovice,
                     qLJourneyman: res.data.qLJourneyman,
-                    qLMasterqLGrandMaster: res.data.qLMasterqLGrandMaster,
+                    qLMaster: res.data.qLMaster,
+                    qLGrandMaster: res.data.qLMasterqLGrandMaster,
                     _id: res.data._id
                 })
                 : this.setState({

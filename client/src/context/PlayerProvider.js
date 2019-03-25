@@ -59,21 +59,23 @@ class PlayerProvider extends Component{
         })
     })
         : axios.get(`/players/${_id}`).then(res => {
+            const {name, avatar, title, level, questLog, questCurrent,
+            jobbing, moneys, doctoring, housing, foodsies, peopling, goingPlaces, cleaning} = res.data
         this.setState({
-            name: res.data.name,
-            avatar: res.data.avatar,
-            title: res.data.title,
-            level: res.data.level,
-            questLog: res.data.questLog,
-            questCurrent: res.data.questCurrent,
-            jobbing: res.data.jobbing,
-            moneys: res.data.moneys,
-            doctoring: res.data.doctoring,
-            housing: res.data.housing,
-            foodsies: res.data.foodsies,
-            peopling: res.data.peopling,
-            goingPlaces: res.data.goingPlaces,
-            cleaning: res.data.cleaning,
+            name: name,
+            avatar: avatar,
+            title: title,
+            level: level,
+            questLog: questLog,
+            questCurrent: questCurrent,
+            jobbing: jobbing,
+            moneys: moneys,
+            doctoring: doctoring,
+            housing: housing,
+            foodsies: foodsies,
+            peopling: peopling,
+            goingPlaces: goingPlaces,
+            cleaning: cleaning,
             _id: res.data._id
         })
     })

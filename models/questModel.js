@@ -6,15 +6,15 @@ const questSchema = new Schema({
         type: String,
         required: true
     },
-    summary:{
+    summary: {
+        type: String
+    },
+    description:{
         type: String,
         required: true
     },
     category: {
-        type: String
-    },
-    description: {
-        type: String
+        type: Array
     },
     youtubeEmbed: {
         type: String
@@ -42,7 +42,8 @@ const questSchema = new Schema({
     qLMaster: {
         type: String,
         playerIDs: Schema.Types.ObjectId
-    },qLGrandMaster: {
+    },
+    qLGrandMaster: {
         type: String,
         playerIDs: Schema.Types.ObjectId
     }

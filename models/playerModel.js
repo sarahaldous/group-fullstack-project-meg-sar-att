@@ -13,6 +13,9 @@ const playerSchema = new Schema ({
     title: {
         type: String
     },
+    xp: {
+        type: Number
+    },
     level: {
         type: Number,
         default: 0

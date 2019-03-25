@@ -15,9 +15,6 @@ const questSchema = new Schema({
     category: {
         type: Array
     },
-    description: {
-        type: String
-    },
     youtubeEmbed: {
         type: String
     },
@@ -34,7 +31,7 @@ const questSchema = new Schema({
         type: Number
     },
     usersCompleted: {
-        type: Array
+        type: Array,
     }
 });
 

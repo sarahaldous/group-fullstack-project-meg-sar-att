@@ -10,6 +10,7 @@ class PlayerProvider extends Component {
             name: "",
             avatar: "",
             title: "",
+            xp: 0,
             level: 0,
             questLog: [],
             questCurrent: [],
@@ -59,12 +60,13 @@ class PlayerProvider extends Component {
         })
     })
         : axios.get(`/players/${_id}`).then(res => {
-            const {name, avatar, title, level, questLog, questCurrent,
+            const {name, avatar, title, xp, level, questLog, questCurrent,
             jobbing, moneys, doctoring, housing, foodsies, peopling, goingPlaces, cleaning} = res.data
         this.setState({
             name: name,
             avatar: avatar,
             title: title,
+            xp: xp,
             level: level,
             questLog: questLog,
             questCurrent: questCurrent,

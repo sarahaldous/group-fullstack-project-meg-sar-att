@@ -18,70 +18,92 @@ import React, {Component} from 'react'
 
 
 class QuestCardRewardsContainer extends Component {
-   render(){
-       console.log(this.props.questRewardMastery)
+   render(props){
        const mastery = () => {
-           switch(this.props.questRewardMastery){
-               case "novice":
-                   return noviceIcon
-                   break
-               case "journeyman":
-                   return journeymanIcon
-                   break
-               case "master":
-                   return masterIcon
-                   break
-               case "grandmaster":
-                   return grandMasterIcon
-                   break
-           }
-       }
-       const category = () => {
-        switch(this.props.questCategory){
-            case "cleaning":
-                return cleaningIcon
-                break
-            case "jobbing":
-                return careerIcon
-                break
-            case "moneys":
-                return financeIcon
-                break
-            case "doctoring":
-                return healthIcon
-                break
-            case "housing":
-                return housingIcon
-                break
-            case "foodsies":
-                return foodIcon
-                break
-            case "peopling":
-                return peoplingIcon
-                break
-            case "goingPlaces":
-                return transportationIcon
-                break
+           switch(this.props.recommendedMLvl){
+                case "novice":
+                    return noviceIcon
+                case "journeyman":
+                    return journeymanIcon
+                case "master":
+                    return masterIcon
+                case "grandmaster":
+                    return grandMasterIcon
+                default: 
+                    return ""
+                    // return console.log("Warning: Failed to identify mastery lvl.")
+            }
         }
-    }
-       console.log(category())
-       console.log(mastery())
-       return (
-           <div className="reward-container">
-               <div className="xp">
-                   <h2>{this.props.questRewardXP}</h2>
-                   <p>XP</p>
-               </div>
-               <img className="mastery-lvl" alt="mastery-lvl" src={mastery()}/>
-               <div className="skill-points">
-                   <div>
-                       <h2>{this.props.questRewardSP}</h2>
-                       <p>SP</p>
-                   </div>
-                   <img alt="category" src={category()}/>
-               </div>
-           </div>
-       )
+
+        const category = () => {
+            switch(this.props.category[0]){
+                case "cleaning":
+                    return cleaningIcon
+                case "jobbing":
+                    return careerIcon
+                case "moneys":
+                    return financeIcon
+                case "doctoring":
+                    return healthIcon
+                case "housing":
+                    return housingIcon
+                case "foodsies":
+                    return foodIcon
+                case "peopling":
+                    return peoplingIcon
+                case "goingPlaces":
+                    return transportationIcon
+                default: 
+                    // return console.log("Warning: Failed to identify quest categories.")
+                    return ""
+            }
+        }
+
+        const mapCategoryIcons = this.props.category.map((category, i) => {
+            const icon = () => {
+                switch(category){
+                    case "cleaning":
+                        return cleaningIcon
+                    case "jobbing":
+                        return careerIcon
+                    case "moneys":
+                        return financeIcon
+                    case "doctoring":
+                        return healthIcon
+                    case "housing":
+                        return housingIcon
+                    case "foodsies":
+                        return foodIcon
+                    case "peopling":
+                        return peoplingIcon
+                    case "goingPlaces":
+                        return transportationIcon
+                    default: 
+                        // return console.log("Warning: Failed to identify quest categories.")
+                        return ""
+                }
+            }
+            return <img alt="category" src={icon()}/>
+        })
+
+        return (
+            <div className="reward-container">
+                <div className="xp">
+                    <h2>{this.props.xp}</h2>
+                    <p>XP</p>
+                </div>
+                <img className="mastery-lvl" alt="recommended level" src={mastery()}/>
+                <div className="skills-container">
+                    <div className="skill-icons">
+                        {mapCategoryIcons}
+                    </div>
+                    <div className="skill-points">
+                        <h2>{this.props.sp}</h2>
+                        <p>SP</p>
+                    </div>
+                </div>
+            </div>
+        )
    }
 }
 

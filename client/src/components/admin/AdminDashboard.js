@@ -3,10 +3,9 @@ import {withPlayer} from "../../context/PlayerProvider.js"
 import UserDashboard from "../authenticated/user/UserDashboard";
 
 class AdminDashboard extends Component {
-    constructor(){
-        super()
-    }
-
+    // constructor(){
+    //     super()
+    // }
 
     render() {
         console.log(this.props)

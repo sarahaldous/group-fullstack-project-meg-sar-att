@@ -6,9 +6,10 @@ const PlayerContext = React.createContext()
 class PlayerProvider extends Component{
     constructor(props){
         super(props)
-        this.state={
+        this.state = {
             name: "",
             avatar: "",
+            title: "",
             level: 0,
             questLog: [],
             _id: "",
@@ -17,24 +18,27 @@ class PlayerProvider extends Component{
             togQuestData: false
         }
     }
+
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
+
     handleSubmit = e => {
         e.preventDefault()
         this.getPlayerData(this.state._id)
         // this.setState( prevState => ({
         //     togPlayerData : !prevState.togPlayerData
         // }))
-
     }
+
     togglerPlayerData = () => {
         this.setState(prevState => ({
             togPlayerData: !prevState.togPlayerData
         }))
     }
+
     togglerQuestData = () => {
         this.setState(prevState => ({
             togQuestData: !prevState.togQuestData
@@ -49,14 +53,14 @@ class PlayerProvider extends Component{
                 ? this.setState({
                     name: res.data.name,
                     avatar: res.data.avatar,
+                    title: res.data.name,
                     level: res.data.level,
                     questLog: res.data.questLog,
                     _id: res.data._id
                 })
                 : this.setState({
-                players: res.data
+                    players: res.data
                 })
-
         })
     }
 
@@ -69,7 +73,8 @@ class PlayerProvider extends Component{
                     handleSubmit: this.handleSubmit,
                     togglerPlayerData: this.togglerPlayerData,
                     togglerQuestData: this.togglerQuestData
-                }}>
+                }}
+            >
                 {this.props.children}
             </PlayerContext.Provider>
         )
@@ -81,4 +86,5 @@ export const withPlayer = C => props => (
         {value => <C {...props} {...value} />}
     </PlayerContext.Consumer>
 )
+
 export default PlayerProvider

@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Switch, Route } from 'react-router-dom'
 
 //COMPONENTS
 import PlayerLvl from "./PlayerLvl.js"
@@ -22,7 +21,6 @@ const UserDashboard = (props) => {
                 <PlayerSkillLvls/>
                 <PlayerSkillLvls/>
                 <PlayerSkillLvls/>
-    
             </div>
         </section>
     )

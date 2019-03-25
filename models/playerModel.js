@@ -19,7 +19,7 @@ const playerSchema = new Schema ({
     },
     //  An array of Quest IDs completed
     questLog: {
-        type: Schema.Types.ObjectId
+        type: Array
     },
     // An array of Quest IDs currently selected
     questCurrent:{

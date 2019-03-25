@@ -16,7 +16,7 @@ class UserDashboard extends Component {
                     <h3>Lvl {this.props.level}</h3>
                 </div>
                 <h1>{this.props.name}</h1>
-                <h2>*Player Title*</h2>
+                <h2>{this.props.title}</h2>
                 <PlayerLvl/>
                 <div className="player-skill-lvl-container">
                     <PlayerSkillLvls/>

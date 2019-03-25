@@ -9,9 +9,18 @@ class PlayerProvider extends Component{
         this.state={
             name: "",
             avatar: "",
+            title: "",
             level: 0,
             questLog: [],
             questCurrent: [],
+            jobbing: 0,
+            moneys: 0,
+            doctoring: 0,
+            housing: 0,
+            foodsies: 0,
+            peopling: 0,
+            goingPlaces: 0,
+            cleaning: 0,
             _id: "",
             players: [],
             togPlayerData: false,
@@ -26,9 +35,9 @@ class PlayerProvider extends Component{
     handleSubmit = e => {
         e.preventDefault()
         this.getPlayerData(this.state._id)
-        // this.setState( prevState => ({
-        //     togPlayerData : !prevState.togPlayerData
-        // }))
+        this.setState( prevState => ({
+            togPlayerData : !prevState.togPlayerData
+        }))
 
     }
     togglerPlayerData = () => {
@@ -50,12 +59,23 @@ class PlayerProvider extends Component{
         })
     })
         : axios.get(`/players/${_id}`).then(res => {
+            const {name, avatar, title, level, questLog, questCurrent,
+            jobbing, moneys, doctoring, housing, foodsies, peopling, goingPlaces, cleaning} = res.data
         this.setState({
-            name: res.data.name,
-            avatar: res.data.avatar,
-            level: res.data.level,
-            questLog: res.data.questLog,
-            questCurrent: res.data.questCurrent,
+            name: name,
+            avatar: avatar,
+            title: title,
+            level: level,
+            questLog: questLog,
+            questCurrent: questCurrent,
+            jobbing: jobbing,
+            moneys: moneys,
+            doctoring: doctoring,
+            housing: housing,
+            foodsies: foodsies,
+            peopling: peopling,
+            goingPlaces: goingPlaces,
+            cleaning: cleaning,
             _id: res.data._id
         })
     })

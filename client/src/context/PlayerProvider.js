@@ -9,8 +9,18 @@ class PlayerProvider extends Component{
         this.state={
             name: "",
             avatar: "",
+            title: "",
             level: 0,
             questLog: [],
+            questCurrent: [],
+            jobbing: 0,
+            moneys: 0,
+            doctoring: 0,
+            housing: 0,
+            foodsies: 0,
+            peopling: 0,
+            goingPlaces: 0,
+            cleaning: 0,
             _id: "",
             players: [],
             togPlayerData: false,
@@ -25,9 +35,9 @@ class PlayerProvider extends Component{
     handleSubmit = e => {
         e.preventDefault()
         this.getPlayerData(this.state._id)
-        // this.setState( prevState => ({
-        //     togPlayerData : !prevState.togPlayerData
-        // }))
+        this.setState( prevState => ({
+            togPlayerData : !prevState.togPlayerData
+        }))
 
     }
     togglerPlayerData = () => {
@@ -52,8 +62,18 @@ class PlayerProvider extends Component{
         this.setState({
             name: res.data.name,
             avatar: res.data.avatar,
+            title: res.data.title,
             level: res.data.level,
             questLog: res.data.questLog,
+            questCurrent: res.data.questCurrent,
+            jobbing: res.data.jobbing,
+            moneys: res.data.moneys,
+            doctoring: res.data.doctoring,
+            housing: res.data.housing,
+            foodsies: res.data.foodsies,
+            peopling: res.data.peopling,
+            goingPlaces: res.data.goingPlaces,
+            cleaning: res.data.cleaning,
             _id: res.data._id
         })
     })

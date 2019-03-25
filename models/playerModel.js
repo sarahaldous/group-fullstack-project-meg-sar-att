@@ -10,6 +10,9 @@ const playerSchema = new Schema ({
         type: String,
         default: "http://icons.iconarchive.com/icons/designbolts/despicable-me-2/128/Minion-Evil-2-icon.png"
     },
+    title: {
+        type: String
+    },
     level: {
         type: Number,
         default: 0
@@ -24,28 +27,36 @@ const playerSchema = new Schema ({
     },
     //  Skill categories
     jobbing: {
-        type: Number
+        type: Number,
+        default: 0
     },
     moneys: {
-        type: Number
+        type: Number,
+        default: 0
     },
     doctoring: {
-        type: Number
+        type: Number,
+        default: 0
     },
     housing: {
-        type: Number
+        type: Number,
+        default: 0
     },
     foodsies: {
-        type: Number
+        type: Number,
+        default: 0
     },
     peopling: {
-        type: Number
+        type: Number,
+        default: 0
     },
     goingPlaces: {
-        type: Number
+        type: Number,
+        default: 0
     },
     cleaning: {
-        type: Number
+        type: Number,
+        default: 0
     }
 });
 

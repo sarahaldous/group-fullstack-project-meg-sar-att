@@ -321,7 +321,6 @@ li:hover {
             height: 45vh;
             width: 100vw;
             max-width: calc(75vh);
-            /* background-image: url(https://sportsandthemind.com/wp-content/uploads/2014/04/Avatar-1.png); */
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -329,6 +328,7 @@ li:hover {
             justify-content: flex-end;
             align-items: flex-end;
             padding: 10pt 20pt;
+            /*box-shadow: 2px 4px 5px 1px rgba(98, 98, 98, 0.82);*/
         }
         .avatar-image-container > h3 {
             color: white;

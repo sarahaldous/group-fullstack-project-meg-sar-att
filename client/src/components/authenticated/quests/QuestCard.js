@@ -35,6 +35,8 @@ class QuestCard extends Component {
                 />
                 <QuestControlPanel
                     _id={this.props._id}
+                    xp={this.props.xp}
+                    sp={this.props.sp}
                 />
                 <div className="community-progress-container">
                     <img alt="other-player" src={foxImg}/>

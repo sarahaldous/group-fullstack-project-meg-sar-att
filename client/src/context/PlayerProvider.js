@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const PlayerContext = React.createContext()
 
-class PlayerProvider extends Component{
+class PlayerProvider extends Component {
     constructor(props){
         super(props)
         this.state={
@@ -52,7 +52,7 @@ class PlayerProvider extends Component{
     }
 
     getPlayerData = (_id) => {
-    typeof _id === 'undefined'
+        typeof _id === 'undefined'
         ? axios.get(`/players/`).then(res => {
         this.setState({
             players: res.data
@@ -80,6 +80,17 @@ class PlayerProvider extends Component{
         })
     })
     }
+
+    handleAddUserQuest = () => {
+        
+        console.log("The Add Quest button has been pushed")
+    }
+
+    // handleRemoveUserQuest = () => {
+    // }
+
+    // handleCompleteUserQuest = () => {
+    // }
 
     render(){
         console.log(this.state)

@@ -256,7 +256,7 @@ li:hover {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        margin-top: 10vh;
+        margin-top: 7.8vh;
     }
 /* HomeDashboard.js */
     .home-dashboard {
@@ -408,11 +408,9 @@ li:hover {
     .quest-container {
         height: 100%;
         background-color: rgb(156, 3, 3);
-        position: fixed;
-        top: 16.5vh;
     }
         .hideableDiv{
-            height: 80vh;
+            /* height: 80vh; */
             /* transition-duration: transform 1s linear; */
             /* transition-property: transform; */
             opacity: 0;
@@ -520,17 +518,18 @@ li:hover {
         color: black;
         /* border-top: rgba(103, 170, 170, 0.432) solid 1px;
         border-bottom: rgba(103, 170, 170, 0.432) solid 1px; */
-        margin-top: 20px;
+        margin-top: 35px;
         margin-bottom: 20px;
     }
     /* video title */
         .quest-card h3 {
             font-size: 1em;
             text-align: center;
-            margin-top: 15px;
+            margin-top: 30px;
             padding: 1.5vh 0vw;
             background-color: rgba(255, 255, 255, 0.678);
             width: 90vw;
+            height: 3.5em;
             max-width: 400px;
             border-radius: 15px 15px 0px 0px;
             align-self: center;
@@ -553,25 +552,24 @@ li:hover {
             background-color: rgba(255, 255, 255, 0.219);
             border: white solid 1px;
             border-top: none;
-            border-radius: 0px 0px 15px 15px;
+            /* border-radius: 0px 0px 15px 15px; */
             padding: 5pt 8pt 9pt 8pt;
             display: flex;
             align-self: center;
             justify-content: center;
-            margin-bottom: 1.5vh;
             width: 90vw;
             max-width: 400px;
-
+            height: 5em;
+            overflow-y: scroll;
         }
     /* quest rewards info */
         .reward-container {
             display: grid;
-            grid-template-columns: 32% 32% 36%;
-            margin-bottom: 1.5vh 0vw;
+            grid-template-columns: repeat(3, 1fr);
             padding: 5pt;
             background-color: rgba(255, 255, 255, 0.219);
             border: white solid 1px;
-            border-radius: 15px;
+            border-radius: 0 0 15px 15px;
             width: 90vw;
             max-width: 400px;
         }
@@ -582,32 +580,39 @@ li:hover {
             flex-direction: column;
             justify-self: center;
             align-self: center;
-            border-right: solid white 1px;
+            padding: 0vh 1vw;
         }
-        .mastery-lvl {
+        .mastery-container {
             grid-column: 2;
-            height: 8.5vh;
-            filter: invert(5%);
-            display: flex;
-            justify-self: center;
-            align-self: center;
-        }
-        .skills-container {
-            grid-column: 3;
-            width: 100%;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             border-left: solid white 1px;
-            padding-left: 10px;
+            padding: 0vh 1vw;
+        }
+        .mastery-icon {
+            width: 3vw;
+        }
+        .skills-container {
+            grid-column: 3;
+            display: flex;
+            border-left: solid white 1px;
         }
         .skill-points {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .skill-icons {
             width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 5pt;
         }
         .skill-icons > img {
             height: 6vh;
@@ -623,7 +628,7 @@ li:hover {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10pt;
+            margin-bottom: 5pt;
         }
         .quest-control-panel > button {
             background-color: rgba(255, 255, 255, 0.383);
@@ -642,7 +647,9 @@ li:hover {
             align-items: center;
             width: 90vw;
             max-width: 400px;
-            margin-bottom: 10pt;
+            padding-bottom: 30pt;
+            margin-bottom: 15pt;
+            border-bottom: solid rgba(0, 0, 0, 0.335) 1px;
         }
         .community-progress-container > img {
             background-color: rgb(211, 212, 212);

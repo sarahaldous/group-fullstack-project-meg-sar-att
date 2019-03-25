@@ -195,7 +195,7 @@ class Quests extends Component {
                 },{
                     title: "How to Change Careers when You're Lost",
                     summary: "How to Change Careers when You're Lost",
-                    category: ["career"],
+                    category: ["jobbing"],
                     youtubeEmbed: "https://www.youtube.com/embed/TUtx-wC5mqA",
                     description: "How to Change Careers when You're Lost",
                     recommendedMLvl: "journeyman",

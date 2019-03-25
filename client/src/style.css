@@ -341,7 +341,7 @@ body h1, h2, h3, h4, h5, h6 {
     .quest-container {
         height: 100%;
         background-color: rgb(156, 3, 3);
-        position: absolute;
+        position: fixed;
         top: 16.5vh;
     }
         .hideableDiv{
@@ -438,7 +438,7 @@ body h1, h2, h3, h4, h5, h6 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-start;
 
         
     }
@@ -525,27 +525,27 @@ body h1, h2, h3, h4, h5, h6 {
             justify-self: center;
             align-self: center;
         }
-        .skill-points {
+        .skills-container {
             grid-column: 3;
             width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             border-left: solid white 1px;
             padding-left: 10px;
         }
-        .skill-points div {
-            grid-column: 1;
-            display: flex;
-            flex-direction: column;
-            justify-self: center;
-            align-self: center;
+        .skill-points {
+            width: 100%;
         }
-        .skill-points img {
-            grid-column: 2;
-            height: 8vh;
-            display: flex;
-            justify-self: center;
-            align-self: center;
+        .skill-icons {
+            width: 100%;
+        }
+        .skill-icons > img {
+            height: 6vh;
+            width: calc(6vh);
+            padding: 5pt;
             filter: invert(5%);
         }
     

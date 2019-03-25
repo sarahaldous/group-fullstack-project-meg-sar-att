@@ -6,17 +6,17 @@ import QuestList from "./QuestList.js"
 class CompletedQuests extends Component {
     
     render(props){
-        let isToggled = this.props.onClick
+        // let isToggled = this.props.onClick
         // console.log(isToggled)
 
-        console.log("Completed Quests Recieved:")
+        console.log("Completed Quests has recieved:")
         console.log(this.props.completedQuests)
         
         return (
             <div 
-                style={this.toggled ? {height: "58vh"} : {height: 0}} 
-                onClick={this.toggler} 
-                className={`completed-quests-container ${!this.toggled && "hideableDiv"}`}
+                style={this.props.toggled ? {height: "58vh"} : {height: 0}} 
+                onClick={this.props.toggler} 
+                className={`completed-quests-container ${!this.props.toggled && "hideableDiv"}`}
             >
                 <QuestList listOfQuests={[...this.props.completedQuests]} questStatus="Completed"/>
                 {/* //     ? {overflowY: "hidden", height: 0, transitionDuration: "1s", zIndex: 3} 

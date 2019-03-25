@@ -12,7 +12,8 @@ import golemImg from "../../avatars/023-golem.png" //temporary hardcoded image
 
 class QuestCard extends Component {
     render(props){
-        
+        console.log(`${this.props.status} Quest Card Recieved Data:`)
+        console.log(`title: ${this.props.title}`)
         return (
             <div className="quest-card">
                 <h3>{this.props.title}</h3>
@@ -26,14 +27,14 @@ class QuestCard extends Component {
                 />
                 <p>{this.props.description}</p>
                 <QuestCardRewardsContainer 
-                    questID={this.props._id}
-                    questRewardXP={this.props.xp}
-                    questRecommendedMLvl={this.props.recommendedMLvl}
-                    questRewardSP={this.props.sp}
-                    questCategory={this.props.category}
+                    _id={this.props._id}
+                    xp={this.props.xp}
+                    recommendedMLvl={this.props.recommendedMLvl}
+                    sp={this.props.sp}
+                    category={this.props.category}
                 />
                 <QuestControlPanel
-                    questID={this.props._id}
+                    _id={this.props._id}
                 />
                 <div className="community-progress-container">
                     <img alt="other-player" src={foxImg}/>

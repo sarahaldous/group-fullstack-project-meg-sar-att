@@ -8,10 +8,9 @@ const questSchema = new Schema({
     },
     summary:{
         type: String,
-        required: true
     },
     category: {
-        type: String
+        type: Array
     },
     description: {
         type: String

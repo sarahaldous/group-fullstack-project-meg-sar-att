@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 //IMAGES
 import QuestIcon from "./001-shield.png"
@@ -10,10 +10,10 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <Link to="/site/home"><img alt="social" src={SocialIcon}/></Link>
-            <Link to="/site/user"><img alt="user-dashboard" src={UserIcon}/></Link>
+            <Link to={`/site/user/profile`}><img alt="user-dashboard" src={UserIcon}/></Link>
             <Link to="/site/quests"><img alt="quest-library" src={QuestIcon}/></Link>
         </nav>
     )
 };
 
-export default Navbar
+export default withRouter(Navbar)

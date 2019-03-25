@@ -2,12 +2,13 @@ import React, {Component} from 'react'
 
 //COMPONENT
 import Post from "./Post.js"
-
+import {withPlayer} from "../../../context/PlayerProvider";
 //IMAGE
 import Dragon from '../../avatars/004-dragon.png'
 import Mermaid from '../../avatars/005-mermaid.png'
 import Unicorn from '../../avatars/007-unicorn.png'
 import Narwhal from '../../avatars/011-narwhal.png'
+
 
 
 class HomeDashboard extends Component {
@@ -37,10 +38,11 @@ class HomeDashboard extends Component {
     }
 
     render(){
+        console.log(this.props)
         //Update to autopopulate player name
         return (
             <section className="home-dashboard">
-                <h5>{this.state.greeting}, Player Name</h5>
+                <h5>{this.state.greeting}, {this.props.name}</h5>
                 <div>
                     <Post avatar={Dragon} name="Dragon" title="has reached Journeyman LvL in tax-preparation"/>
                     <Post avatar={Mermaid} name="Mermaid" title="has posted a new quest attempt"/>
@@ -57,4 +59,4 @@ class HomeDashboard extends Component {
     }
 }
 
-export default HomeDashboard
+export default withPlayer(HomeDashboard)

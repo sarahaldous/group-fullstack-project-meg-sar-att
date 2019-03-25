@@ -42,22 +42,21 @@ class PlayerProvider extends Component{
     }
 
     getPlayerData = (_id) => {
-        console.log(_id)
-        axios.get(`/players/${_id}`).then(res => {
-            console.log(res)
-            _id.length > 0
-                ? this.setState({
-                    name: res.data.name,
-                    avatar: res.data.avatar,
-                    level: res.data.level,
-                    questLog: res.data.questLog,
-                    _id: res.data._id
-                })
-                : this.setState({
-                players: res.data
-                })
-
+    typeof _id === 'undefined'
+        ? axios.get(`/players/`).then(res => {
+        this.setState({
+            players: res.data
         })
+    })
+        : axios.get(`/players/${_id}`).then(res => {
+        this.setState({
+            name: res.data.name,
+            avatar: res.data.avatar,
+            level: res.data.level,
+            questLog: res.data.questLog,
+            _id: res.data._id
+        })
+    })
     }
 
     render(){
@@ -68,7 +67,8 @@ class PlayerProvider extends Component{
                     handleChange: this.handleChange,
                     handleSubmit: this.handleSubmit,
                     togglerPlayerData: this.togglerPlayerData,
-                    togglerQuestData: this.togglerQuestData
+                    togglerQuestData: this.togglerQuestData,
+                    getPlayerData: this.getPlayerData
                 }}>
                 {this.props.children}
             </PlayerContext.Provider>

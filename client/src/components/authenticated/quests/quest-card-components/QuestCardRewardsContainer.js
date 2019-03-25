@@ -22,18 +22,16 @@ class QuestCardRewardsContainer extends Component {
        console.log(this.props.questRewardMastery)
        const mastery = () => {
            switch(this.props.questRewardMastery){
-               case "novice":
-                   return noviceIcon
-                   break
-               case "journeyman":
-                   return journeymanIcon
-                   break
-               case "master":
-                   return masterIcon
-                   break
-               case "grandmaster":
-                   return grandMasterIcon
-                   break
+                case "novice":
+                    return noviceIcon
+                case "journeyman":
+                    return journeymanIcon
+                case "master":
+                    return masterIcon
+                case "grandmaster":
+                    return grandMasterIcon
+                default: 
+                    return console.log("Warning: Failed to identify mastery lvl.")
             }
         }
 
@@ -41,29 +39,22 @@ class QuestCardRewardsContainer extends Component {
             switch(this.props.questCategory){
                 case "cleaning":
                     return cleaningIcon
-                    break
                 case "jobbing":
                     return careerIcon
-                    break
                 case "moneys":
                     return financeIcon
-                    break
                 case "doctoring":
                     return healthIcon
-                    break
                 case "housing":
                     return housingIcon
-
-                    break
                 case "foodsies":
                     return foodIcon
-                    break
                 case "peopling":
                     return peoplingIcon
-                    break
                 case "goingPlaces":
                     return transportationIcon
-                    break
+                default: 
+                    return console.log("Warning: Failed to identify quest categories.")
             }
         }
        console.log(category())

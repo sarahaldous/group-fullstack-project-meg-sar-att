@@ -10,8 +10,11 @@ const questSchema = new Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String
+    },
     description: {
-        type: String,
+        type: String
     },
     youtubeEmbed: {
         type: String
@@ -19,8 +22,9 @@ const questSchema = new Schema({
     imageUrl: {
         type: String
     },
-    //  Qualification Level descriptions for each quest
-    //  Array of player IDs completed per level
+    recommendedMLvl: {
+        type: String
+    },
     qLNovice: {
         type: String,
         playerIDs: Schema.Types.ObjectId
@@ -30,6 +34,9 @@ const questSchema = new Schema({
         playerIDs: Schema.Types.ObjectId
     },
     qLMaster: {
+        type: String,
+        playerIDs: Schema.Types.ObjectId
+    },qLGrandMaster: {
         type: String,
         playerIDs: Schema.Types.ObjectId
     }

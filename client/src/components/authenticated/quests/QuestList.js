@@ -1,19 +1,24 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 //COMPONENTS
 import QuestCard from './QuestCard.js'
 
-const QuestList = () => {
+class QuestList extends Component {
+    constructor(){
+        super()
+        this.state = {
+            sortedQuests: []
+        }
+    }
+
     //TODO replace hardcoded <QuestCard/>s with map to pull ALL quests
-    return (
-        <div className="quest-list">
-            <QuestCard/>
-            <QuestCard/>
-            <QuestCard/>
-            <QuestCard/>
-            <QuestCard/>
-        </div>
-    )
+    render(){
+        return (
+            <div className="quest-list">
+                <QuestCard/>
+            </div>
+        )
+    }
 }
 
 export default QuestList

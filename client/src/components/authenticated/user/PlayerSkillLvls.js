@@ -1,11 +1,12 @@
 import React from 'react'
 
-const PlayerSkillLvls = () => {
+const PlayerSkillLvls = (props) => {
     return (
         <div className="skill-bar-container">
-            <p>Category</p>
+            <p>{props.category}</p>
             <div className="skill-bar">
-                <div className="skill-progress-meter"></div>
+                <div className="skill-progress-meter"
+                style={{width: `${props.sp}%`}}/>
             </div>
         </div>
         

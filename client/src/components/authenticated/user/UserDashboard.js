@@ -25,14 +25,16 @@ class UserDashboard extends Component {
                 </div>
                 <h1>{this.props.name}</h1>
                 <h2>{this.props.title}</h2>
-                <PlayerLvl/>
+                <PlayerLvl xp={this.props.xp}/>
                 <div className="player-skill-lvl-container">
-                    <PlayerSkillLvls/>
-                    <PlayerSkillLvls/>
-                    <PlayerSkillLvls/>
-                    <PlayerSkillLvls/>
-                    <PlayerSkillLvls/>
-                    <PlayerSkillLvls/>
+                    <PlayerSkillLvls category={"Jobbing"} sp={this.props.jobbing}/>
+                    <PlayerSkillLvls category={"Moneys"} sp={this.props.moneys}/>
+                    <PlayerSkillLvls category={"Doctoring"} sp={this.props.doctoring}/>
+                    <PlayerSkillLvls category={"Housing"} sp={this.props.housing}/>
+                    <PlayerSkillLvls category={"Foodsies"} sp={this.props.foodsies}/>
+                    <PlayerSkillLvls category={"Peopling"} sp={this.props.peopling}/>
+                    <PlayerSkillLvls category={"Going Places"} sp={this.props.goingPlaces}/>
+                    <PlayerSkillLvls category={"Cleaning"} sp={this.props.cleaning}/>
 
                 </div>
             </section>

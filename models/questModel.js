@@ -33,21 +33,8 @@ const questSchema = new Schema({
     sp: {
         type: Number
     },
-    qLNovice: {
-        type: String,
-        playerIDs: Schema.Types.ObjectId
-    },
-    qLJourneyman: {
-        type: String,
-        playerIDs: Schema.Types.ObjectId
-    },
-    qLMaster: {
-        type: String,
-        playerIDs: Schema.Types.ObjectId
-    },
-    qLGrandMaster: {
-        type: String,
-        playerIDs: Schema.Types.ObjectId
+    usersCompleted: {
+        type: Array
     }
 });
 

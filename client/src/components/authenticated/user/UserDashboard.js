@@ -7,6 +7,14 @@ import PlayerSkillLvls from "./PlayerSkillLvls.js"
 import {withPlayer} from "../../../context/PlayerProvider";
 
 class UserDashboard extends Component {
+    constructor(props){
+        super()
+        this.state = {
+            userComplete: [],
+            userCurrent: [],
+            userXP: 0,
+        }
+    }
 
     render() {
         console.log(this.props)

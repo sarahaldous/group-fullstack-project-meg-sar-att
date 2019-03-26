@@ -11,7 +11,7 @@ import {withPlayer} from "../../../context/PlayerProvider.js"
 import {withQuests} from "../../../context/QuestProvider.js"
 
 class Quests extends Component {
-    constructor(props){
+    constructor(){
         super()
         this.state = {
             toggle1: false,
@@ -39,7 +39,7 @@ class Quests extends Component {
             console.log("toggle 1 hit")
             this.setState(prevState =>({
                 toggle1: !prevState.toggle1,
-                toggle2: !prevState.toggle1 && !prevState.toggle3 ? false : true,
+                toggle2: !(!prevState.toggle1 && !prevState.toggle3),
                 toggle3: false
             }))
         }
@@ -57,33 +57,35 @@ class Quests extends Component {
             console.log("toggle 3 hit")
             this.setState(prevState => ({
                 toggle1: false,
-                toggle2: !prevState.toggle1 && !prevState.toggle3 ? false : true,
+                toggle2: !(!prevState.toggle1 && !prevState.toggle3),
                 toggle3: !prevState.toggle3
             }))
         }
 
     //---DATA--------------------------------//
-        componentDidMount(){
-            const getAllQuestData = () =>{
-                axios.get("/quests").then(res =>{
-                    // console.log(res.data)
+    async componentDidMount(){
+            console.log(this.props)
+            const getAllQuestData = () => {
+                axios.get("/quests").then(res => {
                     const questData = res.data
 
                     //Delete the following once axios is connected - copied from Minotaur
-                    const tempCompleteUserQuests = ["5c99559ca3527706e066a205","5c99559ca3527706e066a206","5c99559ca3527706e066a207"]
-                    const tempCurrentUserQuests = ["5c99559ca3527706e066a20b","5c99559ca3527706e066a20c"]
+                    // const tempCompleteUserQuests = ["5c99559ca3527706e066a205","5c99559ca3527706e066a206","5c99559ca3527706e066a207"]
+                    // const tempCurrentUserQuests = ["5c99559ca3527706e066a20b","5c99559ca3527706e066a20c"]
 
+                    const tempCompleteUserQuests = this.props.questLog
+                    const tempCurrentUserQuests = this.props.questCurrent
 
                     this.setState({
                         allQuestData: questData,
                         currentQuests: tempCurrentUserQuests,
                         completedQuests: tempCompleteUserQuests
                     },() => {
-                        console.log(this.state.allQuestData)
+                        // console.log(this.state.allQuestData)
 
                         
                         const allQuestData = this.state.allQuestData
-                        console.log("Axios request complete. Quest data ready for sorting.")
+                        // console.log("Axios request complete. Quest data ready for sorting.")
 
                         //Populating Complete Quest Array
                         const completeArray = []
@@ -96,7 +98,6 @@ class Quests extends Component {
                                         description: quest.description,
                                         category: quest.category,
                                         youtubeEmbed: quest.youtubeEmbed,
-                                        description: quest.description,
                                         recommendedMLvl: quest.recommendedMLvl,
                                         xp: quest.xp,
                                         sp: quest.sp,
@@ -106,7 +107,7 @@ class Quests extends Component {
                                 }
                             }
                         })
-                        console.log(completeArray)
+                        // console.log(completeArray)
 
                         // Populating Current Quest Array
                         const currentArray = []
@@ -129,7 +130,7 @@ class Quests extends Component {
                                 }
                             }
                         })
-                        console.log(currentArray)
+                        // console.log(currentArray)
 
                         const pendingArray = []
                         const pendingArrayMap = () => {
@@ -172,7 +173,7 @@ class Quests extends Component {
                             })
                         }
                         pendingArrayMap()
-                        console.log(pendingArray)
+                        // console.log(pendingArray)
                         this.setState({
                             completedQuests: completeArray,
                             currentQuests: currentArray,
@@ -182,7 +183,7 @@ class Quests extends Component {
                     
                 })
             }
-            getAllQuestData()
+            await getAllQuestData()
         }
 
     //---RENDER-------------------------------//
@@ -224,4 +225,4 @@ class Quests extends Component {
         }
 }
 
-export default withQuests(Quests)
+export default withPlayer(withQuests(Quests))

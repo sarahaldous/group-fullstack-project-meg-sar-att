@@ -31,7 +31,7 @@ const questSchema = new Schema({
         type: Number
     },
     usersCompleted: {
-        type: Array,
+        type: Array
     }
 });
 

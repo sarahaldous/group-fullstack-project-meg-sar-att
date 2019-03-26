@@ -17,7 +17,7 @@ class QuestProvider extends Component {
             recommendedMLvl: "",
             xp: 0,
             sp: 0,
-            usersCompleted: [],
+            usersCompleted: []
         }
     }
 

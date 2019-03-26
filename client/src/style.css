@@ -316,12 +316,14 @@ li:hover {
         align-items: center;
         width: 100vw;
         max-width: 700px;
+        padding-top: 2vh;
     }
         .avatar-image-container {
-            height: 45vh;
-            width: 100vw;
-            max-width: calc(75vh);
-            background-size: contain;
+            height: 40vh;
+            width: 80vw;
+            max-height: 300pt;
+            max-width: 400pt;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             display: flex;
@@ -351,6 +353,8 @@ li:hover {
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-around;
+            width: 80vw;
+            max-width: 600pt;
         }
 /* PlayerLvl.js */
     .player-level {
@@ -365,6 +369,7 @@ li:hover {
         .level-bar {
             border: rgb(156, 3, 3) solid 1px;
             width: 80vw;
+            max-width: 600pt;
             height: 25pt;
             margin-left: 10px;
             margin-top: 10px;
@@ -382,26 +387,31 @@ li:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1vw;
+        padding: 1vh 1vw;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
-        .skill-bar-container > p {
-            padding-right: 6pt;
+        .skill-category {
+            width: 11vw;
+            text-align: left;
         }
         .skill-bar {
             border: rgb(103, 170, 170) solid 1px;
             height: 15pt;
-            width: 20vw;
+            width: 12vw;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             padding: 2px;
+            /* margin-left: 10pt; */
         }
         .skill-progress-meter {
             background-color: rgb(103, 170, 170);
             height: 10pt;
             /*width: 50%;*/
         }
-
 
 /*--- QUESTS SECTION ------------*/
 /* Quests.js */
@@ -504,8 +514,6 @@ li:hover {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: flex-start;
-
-        
     }
 /* QuestCard.js */
     .quest-card {
@@ -676,8 +684,38 @@ li:hover {
             border-radius: 0px 15px 15px 0px;
         }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
     .quest-card {
         margin: 0vw 1vw 0vw 1vw;
+    }
+    .user-dashboard-container {
+        padding-bottom: 15vh;
+    }
+    .player-skill-lvl-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 100vw;
+    }
+    .skill-bar-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1vh 1vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .skill-bar {
+        border: rgb(103, 170, 170) solid 1px;
+        height: 15pt;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2px;
     }
 }

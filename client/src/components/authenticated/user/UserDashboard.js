@@ -35,7 +35,6 @@ class UserDashboard extends Component {
                     <PlayerSkillLvls category={"Peopling"} sp={this.props.peopling}/>
                     <PlayerSkillLvls category={"Going Places"} sp={this.props.goingPlaces}/>
                     <PlayerSkillLvls category={"Cleaning"} sp={this.props.cleaning}/>
-
                 </div>
             </section>
         )

@@ -10,17 +10,14 @@ class QuestProvider extends Component {
         this.state = {
             title: "",
             summary: "",
-            category: "",
+            category: [],
             description: "",
             youtubeEmbed: "",
             imageUrl: "",
             recommendedMLvl: "",
             xp: 0,
             sp: 0,
-            qLNovice: "",
-            qLJourneyman: "",
-            qLMaster: "",
-            qLGrandMaster: ""
+            usersCompleted: []
         }
     }
 

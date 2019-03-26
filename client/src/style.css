@@ -374,7 +374,7 @@ li:hover {
         }
         .progress-bar {
             height: 19pt;
-            width: 50%;
+            /*width: 50%;*/
             background-color:  rgb(156, 3, 3);
         }
 /* PlayerSkillLvl.js */
@@ -399,7 +399,7 @@ li:hover {
         .skill-progress-meter {
             background-color: rgb(103, 170, 170);
             height: 10pt;
-            width: 50%;
+            /*width: 50%;*/
         }
 
 

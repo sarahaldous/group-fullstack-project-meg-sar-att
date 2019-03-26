@@ -61,10 +61,7 @@ class QuestProvider extends Component {
                     recommendedMLvl: res.data.recommendedMLvl,
                     xp: res.data.xp,
                     sp: res.data.sp,
-                    qLNovice: res.data.qLNovice,
-                    qLJourneyman: res.data.qLJourneyman,
-                    qLMaster: res.data.qLMaster,
-                    qLGrandMaster: res.data.qLMasterqLGrandMaster,
+                    usersCompleted: res.data.usersCompleted,
                     _id: res.data._id
                 })
                 : this.setState({

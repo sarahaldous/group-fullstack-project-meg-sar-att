@@ -3,13 +3,14 @@ import axios from 'axios'
 
 const PlayerContext = React.createContext()
 
-class PlayerProvider extends Component{
+class PlayerProvider extends Component {
     constructor(props){
         super(props)
         this.state={
             name: "",
             avatar: "",
             title: "",
+            xp: 0,
             level: 0,
             questLog: [],
             questCurrent: [],
@@ -52,19 +53,20 @@ class PlayerProvider extends Component{
     }
 
     getPlayerData = (_id) => {
-    typeof _id === 'undefined'
+        typeof _id === 'undefined'
         ? axios.get(`/players/`).then(res => {
         this.setState({
             players: res.data
         })
     })
         : axios.get(`/players/${_id}`).then(res => {
-            const {name, avatar, title, level, questLog, questCurrent,
+            const {name, avatar, title, xp, level, questLog, questCurrent,
             jobbing, moneys, doctoring, housing, foodsies, peopling, goingPlaces, cleaning} = res.data
         this.setState({
             name: name,
             avatar: avatar,
             title: title,
+            xp: xp,
             level: level,
             questLog: questLog,
             questCurrent: questCurrent,
@@ -80,6 +82,17 @@ class PlayerProvider extends Component{
         })
     })
     }
+
+    handleAddUserQuest = () => {
+        
+        console.log("The Add Quest button has been pushed")
+    }
+
+    // handleRemoveUserQuest = () => {
+    // }
+
+    // handleCompleteUserQuest = () => {
+    // }
 
     render(){
         console.log(this.state)

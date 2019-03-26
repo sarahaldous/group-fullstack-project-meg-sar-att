@@ -685,6 +685,9 @@ li:hover {
         }
 
 @media screen and (max-width: 900px) {
+    .authenticated-container {
+        margin-top: 6.5vh;
+    }
     .quest-card {
         margin: 0vw 1vw 0vw 1vw;
     }

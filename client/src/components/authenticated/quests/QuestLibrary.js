@@ -5,8 +5,8 @@ import QuestList from "./QuestList.js"
 
 class QuestLibrary extends Component {
     render(props){
-        console.log("Pending Quests Received:")
-        console.log(this.props.pendingQuests)
+        // console.log("Pending Quests Received:")
+        // console.log(this.props.pendingQuests)
         return (
             <div 
                 style={this.props.toggled ? {height: "56.5vh"} : {height: 0}} 

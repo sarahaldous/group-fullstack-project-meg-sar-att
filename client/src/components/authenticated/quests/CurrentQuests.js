@@ -5,8 +5,8 @@ import QuestList from "./QuestList.js"
 
 class CurrentQuests extends Component {
     render(props){
-        console.log("Current Quests has Received:")
-        console.log(this.props.currentQuests)
+        // console.log("Current Quests has Received:")
+        // console.log(this.props.currentQuests)
         return (
             <div 
                 style={this.props.toggled ? {height: "58vh"} : {height: 0}} 

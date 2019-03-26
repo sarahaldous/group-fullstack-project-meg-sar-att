@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios";
 
-
 const QuestContext = React.createContext()
 
 class QuestProvider extends Component {
@@ -17,11 +16,10 @@ class QuestProvider extends Component {
             recommendedMLvl: "",
             xp: 0,
             sp: 0,
-            usersCompleted: []
+            usersCompleted: [],
+            quests: []
         }
     }
-
-    // questCategoryArray = ["jobbing", "moneys", "doctoring", "housing", "foodsies", "peopling", "goingPlaces", "cleaning"]
 
     handleChange = e => {
         this.setState({
@@ -70,13 +68,38 @@ class QuestProvider extends Component {
         })
     }
 
+    getAllQuestData = () =>{
+        axios.get("/quests").then(res =>{
+            // console.log(res.data)
+            const mappedAllQuests = res.data.map((quest, i) => {
+                return {
+                    key: i,
+                    title: quest.title,
+                    summary: quest.summary,
+                    category: quest.category,
+                    youtubeEmbed: quest.youtubeEmbed,
+                    description: quest.description,
+                    recommendedMLvl: quest.recommendedMLvl,
+                    xp: quest.xp,
+                    sp: quest.sp,
+                    _id: quest._id
+                }
+            })
+            console.log(mappedAllQuests)
+            this.setState({
+                allQuestData: mappedAllQuests
+            })
+        })
+    }
+
     render(){
         console.log(this.state)
         return (
             <QuestContext.Provider
                 value={{...this.state,
                     handleChange: this.handleChange,
-                    handleSubmit: this.handleSubmit
+                    handleSubmit: this.handleSubmit,
+                    getAllQuestData: this.getAllQuestData
                 }}
             >
                 {this.props.children}
@@ -85,10 +108,9 @@ class QuestProvider extends Component {
     }
 }
 
-export const withQuests= C => props => (
-    <QuestsContext.Consumer>
+export const withQuests = C => props => (
+    <QuestContext.Consumer>
         {value => <C {...props} {...value} />}
-    </QuestsContext.Consumer>
+    </QuestContext.Consumer>
 )
-
 export default QuestProvider

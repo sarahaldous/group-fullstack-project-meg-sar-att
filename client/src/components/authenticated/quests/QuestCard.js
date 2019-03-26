@@ -12,8 +12,8 @@ import golemImg from "../../avatars/023-golem.png" //temporary hardcoded image
 
 class QuestCard extends Component {
     render(props){
-        console.log(`${this.props.status} Quest Card Recieved Data:`)
-        console.log(`title: ${this.props.title}`)
+        // console.log(`${this.props.status} Quest Card Recieved Data:`)
+        // console.log(`title: ${this.props.title}`)
         return (
             <div className="quest-card">
                 <h3>{this.props.title}</h3>

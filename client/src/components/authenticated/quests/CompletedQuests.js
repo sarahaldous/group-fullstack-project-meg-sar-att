@@ -9,8 +9,8 @@ class CompletedQuests extends Component {
         // let isToggled = this.props.onClick
         // console.log(isToggled)
 
-        console.log("Completed Quests has recieved:")
-        console.log(this.props.completedQuests)
+        // console.log("Completed Quests has recieved:")
+        // console.log(this.props.completedQuests)
         
         return (
             <div 

@@ -5,8 +5,8 @@ import QuestCard from './QuestCard.js'
 
 class QuestList extends Component {
     render(props){
-        console.log(`Quest List has recieved ${this.props.questStatus} Quest Data:`)
-        console.log(this.props.listOfQuests)
+        // console.log(`Quest List has recieved ${this.props.questStatus} Quest Data:`)
+        // console.log(this.props.listOfQuests)
         const mappedQuests = this.props.listOfQuests.map((quest, i) => {
             return  <QuestCard
                         status={this.props.questStatus}

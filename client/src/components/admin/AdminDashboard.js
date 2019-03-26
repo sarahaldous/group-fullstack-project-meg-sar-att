@@ -1,11 +1,13 @@
 import React, {Component} from "react"
+
+//CONTEXT
 import {withPlayer} from "../../context/PlayerProvider.js"
-import UserDashboard from "../authenticated/user/UserDashboard";
+
+//COMPONENTS
+import UserDashboard from "../authenticated/user/UserDashboard.js"
+import Quest from "../authenticated/quests/Quests.js"
 
 class AdminDashboard extends Component {
-    // constructor(){
-    //     super()
-    // }
 
     render() {
         console.log(this.props)
@@ -37,10 +39,12 @@ class AdminDashboard extends Component {
                         this.props.players.map(player =>
                         <UserDashboard {...player} key={player._id}/>)
                         }
+                        {this.props.name.length > 0 &&
+                        <Quest {...this.props}/>}
                 </div>
             </div>
         )
     }
 }
 
-export default withPlayer(AdminDashboard)
+export default AdminDashboard

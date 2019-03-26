@@ -26,7 +26,7 @@ const playerSchema = new Schema ({
     },
     // An array of Quest IDs currently selected
     questCurrent:{
-        type: Schema.Types.ObjectId
+        type: Array
     },
     //  Skill categories
     jobbing: {

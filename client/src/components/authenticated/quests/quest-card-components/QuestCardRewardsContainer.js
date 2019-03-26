@@ -59,32 +59,32 @@ class QuestCardRewardsContainer extends Component {
             }
         }
 
-        const mapCategoryIcons = this.props.category.map((category, i) => {
-            const icon = () => {
-                switch(category){
-                    case "cleaning":
-                        return cleaningIcon
-                    case "jobbing":
-                        return careerIcon
-                    case "moneys":
-                        return financeIcon
-                    case "doctoring":
-                        return healthIcon
-                    case "housing":
-                        return housingIcon
-                    case "foodsies":
-                        return foodIcon
-                    case "peopling":
-                        return peoplingIcon
-                    case "goingPlaces":
-                        return transportationIcon
-                    default: 
-                        // return console.log("Warning: Failed to identify quest categories.")
-                        return ""
-                }
-            }
-            return <img alt="category" src={icon()}/>
-        })
+        // const mapCategoryIcons = this.props.category.map((category, i) => {
+        //     const icon = () => {
+        //         switch(category){
+        //             case "cleaning":
+        //                 return cleaningIcon
+        //             case "jobbing":
+        //                 return careerIcon
+        //             case "moneys":
+        //                 return financeIcon
+        //             case "doctoring":
+        //                 return healthIcon
+        //             case "housing":
+        //                 return housingIcon
+        //             case "foodsies":
+        //                 return foodIcon
+        //             case "peopling":
+        //                 return peoplingIcon
+        //             case "goingPlaces":
+        //                 return transportationIcon
+        //             default: 
+        //                 // return console.log("Warning: Failed to identify quest categories.")
+        //                 return ""
+        //         }
+        //     }
+        //     return <img alt="category" src={icon()} key={i}/>
+        // })
 
         return (
             <div className="reward-container">
@@ -98,7 +98,7 @@ class QuestCardRewardsContainer extends Component {
                 </div>
                 <div className="skills-container">
                     <div className="skill-icons">
-                        {mapCategoryIcons}
+                        {/* {mapCategoryIcons} */}
                     </div>
                     <div className="skill-points">
                         <h2>{this.props.sp}</h2>

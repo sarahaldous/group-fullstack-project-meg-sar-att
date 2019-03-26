@@ -11,7 +11,6 @@ class QuestControlPanel extends Component {
                 <button>Complete Quest</button>
             </div>
         )
-        
     }
 }
 

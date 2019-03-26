@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import {withPlayer} from "../../../../context/PlayerProvider.js"
 
 class QuestControlPanel extends Component {
 
     render(){
+        console.log(this.props)
         return (
             <div className="quest-control-panel">
                 <button onClick={this.props.handleAddUserQuest}>Add Quest</button>
@@ -14,4 +14,4 @@ class QuestControlPanel extends Component {
     }
 }
 
-export default withPlayer(QuestControlPanel)
+export default QuestControlPanel

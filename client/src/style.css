@@ -389,29 +389,27 @@ li:hover {
         align-items: center;
         padding: 1vh 1vw;
         width: 50%;
-        display: flex;
         justify-content: space-evenly;
-        align-items: center;
     }
-        .skill-category {
-            width: 11vw;
-            text-align: left;
-        }
-        .skill-bar {
-            border: rgb(103, 170, 170) solid 1px;
-            height: 15pt;
-            width: 12vw;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 2px;
-            /* margin-left: 10pt; */
-        }
-        .skill-progress-meter {
-            background-color: rgb(103, 170, 170);
-            height: 10pt;
-            /*width: 50%;*/
-        }
+    .skill-category {
+        width: 11vw;
+        text-align: left;
+    }
+    .skill-bar {
+        border: rgb(103, 170, 170) solid 1px;
+        height: 15pt;
+        width: 12vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2px;
+        /* margin-left: 10pt; */
+    }
+    .skill-progress-meter {
+        background-color: rgb(103, 170, 170);
+        height: 10pt;
+        /*width: 50%;*/
+    }
 
 /*--- QUESTS SECTION ------------*/
 /* Quests.js */

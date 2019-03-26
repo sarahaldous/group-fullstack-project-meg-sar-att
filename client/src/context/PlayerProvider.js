@@ -95,7 +95,6 @@ class PlayerProvider extends Component {
     // }
 
     render(){
-        console.log(this.state)
         return (
             <PlayerContext.Provider
                 value={{...this.state,

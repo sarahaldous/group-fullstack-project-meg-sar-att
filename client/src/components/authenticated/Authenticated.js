@@ -12,7 +12,6 @@ class Authenticated extends Component {
     componentDidMount(){
         const idCaller = this.props.location.pathname.slice(11)
         this.props.getPlayerData(idCaller)
-        console.log(this.props)
     }
 
     render() {

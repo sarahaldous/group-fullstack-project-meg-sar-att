@@ -92,7 +92,7 @@ class QuestCardRewardsContainer extends Component {
                     <h2>{this.props.xp}</h2>
                     <p>XP</p>
                 </div>
-                <div class="mastery-container">
+                <div className="mastery-container">
                     <img className="mastery-icon" alt="recommended level" src={mastery()}/>
                     <p>{this.props.recommendedMLvl}</p>
                 </div>

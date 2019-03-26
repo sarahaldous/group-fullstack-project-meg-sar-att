@@ -60,8 +60,6 @@ class Quests extends Component {
 
     //---DATA--------------------------------//
         componentDidMount(){
-
-
             const completeArray = []
             // const completeArrayMap = fakeData.map((quest, i) => {
             //     for(let i=0; i < fakeUserCompleteArray.length; i++){

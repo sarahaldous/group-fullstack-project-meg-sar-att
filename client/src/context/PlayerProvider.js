@@ -83,16 +83,44 @@ class PlayerProvider extends Component {
     })
     }
 
-    handleAddUserQuest = () => {
-        
-        console.log("The Add Quest button has been pushed")
+    handleAddUserQuest = (quest_id) => {
+        axios.put(`players/${this.state._id}`,
+            {type:"questCurrent", quest_id:quest_id}).then( res => {
+                this.setState(prevState => ({
+                    questCurrent: prevState.questCurrent.map(quest =>
+                    quest._id === quest_id ? res.data : quest)
+                }))
+        })
     }
 
-    // handleRemoveUserQuest = () => {
-    // }
+    handleRemoveUserQuest = (quest_id) => {
+        axios.put(`players/remove/${this.state._id}`,
+            {type:"questCurrent",quest_id: quest_id}).then(res => {
+                this.setState(prevState => ({
+                    questCurrent: prevState.questCurrent.map(quest =>
+                        quest._id === quest_id ? quest : res.data)
+                }))
+            })
+    }
 
-    // handleCompleteUserQuest = () => {
-    // }
+    handleCompleteUserQuest = (quest_id) => {
+        console.log(quest_id)
+        axios.put(`players/${this.state._id}`,
+            {type:"questLog",quest_id:quest_id}).then( res => {
+            this.setState(prevState => ({
+                questLog: prevState.questLog.map(quest =>
+                    quest._id === quest_id ? res.data : quest)
+            }))
+        })
+        axios.put(`players/remove/${this.state._id}`,
+            {type:"questCurrent",quest_id: quest_id}).then(res => {
+            this.setState(prevState => ({
+                questCurrent: prevState.questCurrent.map(quest =>
+                    quest._id === quest_id ? quest : res.data)
+            }))
+        })
+    }
+
 
     render(){
         return (
@@ -102,7 +130,10 @@ class PlayerProvider extends Component {
                     handleSubmit: this.handleSubmit,
                     togglerPlayerData: this.togglerPlayerData,
                     togglerQuestData: this.togglerQuestData,
-                    getPlayerData: this.getPlayerData
+                    getPlayerData: this.getPlayerData,
+                    handleAddUserQuest: this.handleAddUserQuest,
+                    handleRemoveUserQuest: this.handleRemoveUserQuest,
+                    handleCompleteUserQuest: this.handleCompleteUserQuest
                 }}>
                 {this.props.children}
             </PlayerContext.Provider>

@@ -64,7 +64,7 @@ class Quests extends Component {
 
     //---DATA--------------------------------//
     async componentDidMount(){
-            console.log(this.props)
+            // console.log(this.props)
             const getAllQuestData = () => {
                 axios.get("/quests").then(res => {
                     const questData = res.data

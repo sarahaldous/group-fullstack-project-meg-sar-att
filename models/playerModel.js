@@ -22,11 +22,13 @@ const playerSchema = new Schema ({
     },
     //  An array of Quest IDs completed
     questLog: {
-        type: Array
+        type: [String],
+        default: []
     },
     // An array of Quest IDs currently selected
     questCurrent:{
-        type: Array
+        type: [String],
+        default: []
     },
     //  Skill categories
     jobbing: {

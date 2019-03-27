@@ -274,7 +274,7 @@ class PlayerProvider extends Component {
                     togglerPlayerData: this.togglerPlayerData,
                     togglerQuestData: this.togglerQuestData,
                     getPlayerData: this.getPlayerData,
-                    getPlayerQuestandLvlData: this.getPlayerQuestandLvlData
+                    getPlayerQuestandLvlData: this.getPlayerQuestandLvlData,
                     handleAddUserQuest: this.handleAddUserQuest,
                     handleRemoveUserQuest: this.handleRemoveUserQuest,
                     handleCompleteUserQuest: this.handleCompleteUserQuest

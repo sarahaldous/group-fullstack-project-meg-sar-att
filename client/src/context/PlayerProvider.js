@@ -83,7 +83,6 @@ class PlayerProvider extends Component {
             : axios.get(`/players/${_id}`).then(res => {
                 const {name, avatar, title, xp, level, questLog, questCurrent,
                 jobbing, moneys, doctoring, housing, foodsies, peopling, goingPlaces, cleaning} = res.data
-
                 this.setState({
                     name: name,
                     avatar: avatar,
@@ -227,6 +226,44 @@ class PlayerProvider extends Component {
                 })
             })
     }
+    
+    handleAddUserQuest = (quest_id) => {
+        axios.put(`players/${this.state._id}`,
+            {type:"questCurrent", quest_id:quest_id}).then( res => {
+                this.setState(prevState => ({
+                    questCurrent: prevState.questCurrent.map(quest =>
+                    quest._id === quest_id ? res.data : quest)
+                }))
+        })
+    }
+
+    handleRemoveUserQuest = (quest_id) => {
+        axios.put(`players/remove/${this.state._id}`,
+            {type:"questCurrent",quest_id: quest_id}).then(res => {
+                this.setState(prevState => ({
+                    questCurrent: prevState.questCurrent.map(quest =>
+                        quest._id === quest_id ? quest : res.data)
+                }))
+            })
+    }
+
+    handleCompleteUserQuest = (quest_id) => {
+        console.log(quest_id)
+        axios.put(`players/${this.state._id}`,
+            {type:"questLog",quest_id:quest_id}).then( res => {
+            this.setState(prevState => ({
+                questLog: prevState.questLog.map(quest =>
+                    quest._id === quest_id ? res.data : quest)
+            }))
+        })
+        axios.put(`players/remove/${this.state._id}`,
+            {type:"questCurrent",quest_id: quest_id}).then(res => {
+            this.setState(prevState => ({
+                questCurrent: prevState.questCurrent.map(quest =>
+                    quest._id === quest_id ? quest : res.data)
+            }))
+        })
+    }
 
     render(){
         return (
@@ -238,6 +275,9 @@ class PlayerProvider extends Component {
                     togglerQuestData: this.togglerQuestData,
                     getPlayerData: this.getPlayerData,
                     getPlayerQuestandLvlData: this.getPlayerQuestandLvlData
+                    handleAddUserQuest: this.handleAddUserQuest,
+                    handleRemoveUserQuest: this.handleRemoveUserQuest,
+                    handleCompleteUserQuest: this.handleCompleteUserQuest
                 }}>
                 {this.props.children}
             </PlayerContext.Provider>

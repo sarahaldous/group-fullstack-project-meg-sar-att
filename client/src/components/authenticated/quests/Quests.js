@@ -69,10 +69,6 @@ class Quests extends Component {
                 axios.get("/quests").then(res => {
                     const questData = res.data
 
-                    //Delete the following once axios is connected - copied from Minotaur
-                    // const tempCompleteUserQuests = ["5c99559ca3527706e066a205","5c99559ca3527706e066a206","5c99559ca3527706e066a207"]
-                    // const tempCurrentUserQuests = ["5c99559ca3527706e066a20b","5c99559ca3527706e066a20c"]
-
                     const tempCompleteUserQuests = this.props.questLog
                     const tempCurrentUserQuests = this.props.questCurrent
 
@@ -81,17 +77,15 @@ class Quests extends Component {
                         currentQuests: tempCurrentUserQuests,
                         completedQuests: tempCompleteUserQuests
                     },() => {
-                        // console.log(this.state.allQuestData)
-
                         
                         const allQuestData = this.state.allQuestData
                         // console.log("Axios request complete. Quest data ready for sorting.")
 
                         //Populating Complete Quest Array
                         const completeArray = []
-                        const completeArrayMap = allQuestData.map((quest, i) => {
-                            for(let i=0; i < this.state.completedQuests.length; i++){
-                                if(this.state.completedQuests[i] === quest._id){
+                        const completeArrayMap = allQuestData.filter((quest, i) => {
+                            for(let j=0; j < this.state.completedQuests.length; j++){
+                                if(this.state.completedQuests[j] === quest._id){
                                     const grabbedQuest = {
                                         key: i,
                                         title: quest.title,
@@ -107,13 +101,12 @@ class Quests extends Component {
                                 }
                             }
                         })
-                        // console.log(completeArray)
 
                         // Populating Current Quest Array
                         const currentArray = []
-                        const currentArrayMap = allQuestData.map((quest, i) => {
-                            for(let i=0; i < this.state.currentQuests.length; i++){
-                                if(this.state.currentQuests[i] === quest._id){
+                        const currentArrayMap = allQuestData.filter((quest, i) => {
+                            for(let j=0; j < this.state.currentQuests.length; j++){
+                                if(this.state.currentQuests[j] === quest._id){
                                     const grabbedQuest = {
                                         key: i,
                                         title: quest.title,
@@ -130,8 +123,8 @@ class Quests extends Component {
                                 }
                             }
                         })
-                        // console.log(currentArray)
 
+                        // Populating un-attempted quests
                         const pendingArray = []
                         const pendingArrayMap = () => {
                             const claimedQuests = [...this.state.completedQuests, ...this.state.currentQuests]
@@ -172,8 +165,7 @@ class Quests extends Component {
                                 }
                             })
                         }
-                        pendingArrayMap()
-                        // console.log(pendingArray)
+
                         this.setState({
                             completedQuests: completeArray,
                             currentQuests: currentArray,

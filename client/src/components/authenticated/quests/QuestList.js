@@ -8,12 +8,13 @@ class QuestList extends Component {
         // console.log(`Quest List has recieved ${this.props.questStatus} Quest Data:`)
         // console.log(this.props.listOfQuests)
         const mappedQuests = this.props.listOfQuests.map((quest, i) => {
+            console.log(quest.category)
             return  <QuestCard
                         status={this.props.questStatus}
                         key={i}
                         title={quest.title}
                         summary={quest.summary}
-                        category={quest.category}
+                        category={quest.category || []}
                         youtubeEmbed={quest.youtubeEmbed}
                         description={quest.description}
                         recommendedMLvl={quest.recommendedMLvl}

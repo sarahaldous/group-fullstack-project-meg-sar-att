@@ -1,26 +1,26 @@
 import React, {Component} from 'react'
 
 //IMAGES
-   //Mastery Icons
-   import grandMasterIcon from '../rank-icons/grandmaster.png'
-   import masterIcon from '../rank-icons/master.png'
-   import journeymanIcon from '../rank-icons/journeyman.png'
-   import noviceIcon from '../rank-icons/novice.png'
-   //Category Icons
-   import careerIcon from "../category-icons/career.png"
-   import financeIcon from "../category-icons/finance.png"
-   import healthIcon from "../category-icons/health.png"
-   import housingIcon from "../category-icons/housing.png"
-   import foodIcon from "../category-icons/food.png"
-   import peoplingIcon from "../category-icons/peopling.png"
-   import transportationIcon from "../category-icons/transportation.png"
-   import cleaningIcon from "../category-icons/cleaning.png"
+    //Mastery Icons
+    import grandMasterIcon from '../rank-icons/grandmaster.png'
+    import masterIcon from '../rank-icons/master.png'
+    import journeymanIcon from '../rank-icons/journeyman.png'
+    import noviceIcon from '../rank-icons/novice.png'
+    //Category Icons
+    import careerIcon from "../category-icons/career.png"
+    import financeIcon from "../category-icons/finance.png"
+    import healthIcon from "../category-icons/health.png"
+    import housingIcon from "../category-icons/housing.png"
+    import foodIcon from "../category-icons/food.png"
+    import peoplingIcon from "../category-icons/peopling.png"
+    import transportationIcon from "../category-icons/transportation.png"
+    import cleaningIcon from "../category-icons/cleaning.png"
 
 
 class QuestCardRewardsContainer extends Component {
-   render(props){
-       const mastery = () => {
-           switch(this.props.recommendedMLvl){
+    render(props){
+        const masteryIcon = () => {
+            switch(this.props.recommendedMLvl){
                 case "novice":
                     return noviceIcon
                 case "journeyman":
@@ -30,61 +30,37 @@ class QuestCardRewardsContainer extends Component {
                 case "grandmaster":
                     return grandMasterIcon
                 default: 
-                    return ""
-                    // return console.log("Warning: Failed to identify mastery lvl.")
+                    // return ""
+                    return console.log("Warning: Failed to identify mastery lvl.")
             }
         }
 
-        const category = () => {
-            switch(this.props.category[0]){
-                case "cleaning":
-                    return cleaningIcon
-                case "jobbing":
-                    return careerIcon
-                case "moneys":
-                    return financeIcon
-                case "doctoring":
-                    return healthIcon
-                case "housing":
-                    return housingIcon
-                case "foodsies":
-                    return foodIcon
-                case "peopling":
-                    return peoplingIcon
-                case "goingPlaces":
-                    return transportationIcon
-                default: 
-                    // return console.log("Warning: Failed to identify quest categories.")
-                    return ""
+        const categoryIcon = () => {
+            for(let i = 0; i < this.props.category.length; i++){
+                switch(this.props.category[i]){
+                    case "cleaning":
+                        return cleaningIcon
+                    case "jobbing":
+                        return careerIcon
+                    case "moneys":
+                        return financeIcon
+                    case "doctoring":
+                        return healthIcon
+                    case "housing":
+                        return housingIcon
+                    case "foodsies":
+                        return foodIcon
+                    case "peopling":
+                        return peoplingIcon
+                    case "goingPlaces":
+                        return transportationIcon
+                    default: 
+                        // return ""
+                        return console.log("Warning: Failed to identify quest categories.")
+                }
             }
         }
 
-        // const mapCategoryIcons = this.props.category.map((category, i) => {
-        //     const icon = () => {
-        //         switch(category){
-        //             case "cleaning":
-        //                 return cleaningIcon
-        //             case "jobbing":
-        //                 return careerIcon
-        //             case "moneys":
-        //                 return financeIcon
-        //             case "doctoring":
-        //                 return healthIcon
-        //             case "housing":
-        //                 return housingIcon
-        //             case "foodsies":
-        //                 return foodIcon
-        //             case "peopling":
-        //                 return peoplingIcon
-        //             case "goingPlaces":
-        //                 return transportationIcon
-        //             default: 
-        //                 // return console.log("Warning: Failed to identify quest categories.")
-        //                 return ""
-        //         }
-        //     }
-        //     return <img alt="category" src={icon()} key={i}/>
-        // })
 
         return (
             <div className="reward-container">
@@ -93,12 +69,12 @@ class QuestCardRewardsContainer extends Component {
                     <p>XP</p>
                 </div>
                 <div className="mastery-container">
-                    <img className="mastery-icon" alt="recommended level" src={mastery()}/>
+                    <img className="mastery-icon" alt="recommended level" src={masteryIcon()}/>
                     <p>{this.props.recommendedMLvl}</p>
                 </div>
                 <div className="skills-container">
                     <div className="skill-icons">
-                        {/* {mapCategoryIcons} */}
+                        <img className="mastery-icon" alt="recommended level" src={categoryIcon()}/>
                     </div>
                     <div className="skill-points">
                         <h2>{this.props.sp}</h2>
@@ -107,7 +83,7 @@ class QuestCardRewardsContainer extends Component {
                 </div>
             </div>
         )
-   }
+    }
 }
 
 export default QuestCardRewardsContainer

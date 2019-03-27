@@ -17,4 +17,5 @@ class TempNavBar extends Component {
     }
 }
 
+
 export default withPlayer(TempNavBar)

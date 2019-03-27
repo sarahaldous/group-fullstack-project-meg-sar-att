@@ -1,20 +1,14 @@
 import React, {Component} from 'react'
-// import { Switch, Route } from 'react-router-dom'
+import axios from "axios"
 
 //COMPONENTS
 import PlayerLvl from "./PlayerLvl.js"
 import PlayerSkillLvls from "./PlayerSkillLvls.js"
+
+//CONTEXT
 import {withPlayer} from "../../../context/PlayerProvider";
 
 class UserDashboard extends Component {
-    constructor(props){
-        super()
-        this.state = {
-            userComplete: [],
-            userCurrent: [],
-            userXP: 0,
-        }
-    }
 
     render() {
         console.log(this.props)
@@ -25,7 +19,7 @@ class UserDashboard extends Component {
                 </div>
                 <h1>{this.props.name}</h1>
                 <h2>{this.props.title}</h2>
-                <PlayerLvl xp={this.props.xp}/>
+                <PlayerLvl xp={this.props.xp} questLog={this.props.questLog}/>
                 <div className="player-skill-lvl-container">
                     <PlayerSkillLvls category={"Jobbing"} sp={this.props.jobbing}/>
                     <PlayerSkillLvls category={"Moneys"} sp={this.props.moneys}/>

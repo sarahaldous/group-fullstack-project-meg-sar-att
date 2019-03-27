@@ -1,6 +1,9 @@
 import React from 'react'
 
+//CONTEXT
+
 const PlayerLvl = (props) => {
+    
     return (
         <div className="player-level">
             <p>XP</p>
@@ -12,3 +15,4 @@ const PlayerLvl = (props) => {
 };
 
 export default PlayerLvl
+

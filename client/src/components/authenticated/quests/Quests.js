@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import axios from 'axios';
 
 //COMPONENTS
 import CompletedQuests from "./CompletedQuests.js"
@@ -20,7 +19,6 @@ class Quests extends Component {
             completedDisplayedQuests: [],
             currentDisplayedQuests: [],
             pendingDisplayedQuests: [],
-            allQuestData: []
         }
     }
 
@@ -65,33 +63,50 @@ class Quests extends Component {
     //---DATA--------------------------------//
         componentDidMount(){
 
-            const dataStatus = this.props.name
-                ?   "Player data acquired!"
-                :   "Awaiting player data, please wait..."
-            
-            console.log(dataStatus)
+            // Confirms if data is uploaded from Player Provider
+            if(this.props.name){
+                const numOfInProgress = this.props.questCurrent.length
+                const numOfCompleted = this.props.questLog.length
+                const numOfTotalQuests = this.props.allQuestData.length
+                const numOfRemainingQuests = numOfTotalQuests - numOfCompleted - numOfInProgress
 
+                console.log("Player data has been acquired!")
+                console.log(`There are a total of ${numOfTotalQuests} currently in the database.`)
+                console.log(`${this.props.name} has completed ${numOfCompleted} quests.`)
+                console.log(`${this.props.name} is currently working on ${numOfInProgress} quests.`)
+                console.log(`There are currently ${numOfRemainingQuests} quests that the player has not attempted yet.`)
+            } else {
+                console.log("Awaiting player data, please wait...")
+            }
+
+            // Creates array of quest IDs that should not be included in the New Quests tab
             const userQuestsArray = []
             const mapCompleteIds = this.props.questLog.map(quest => {
                 userQuestsArray.push(quest)
+                return quest
             })
+            console.log(mapCompleteIds)
             const mapCurrentIds = this.props.questCurrent.map(quest => {
                 userQuestsArray.push(quest)
+                return quest
             })
+            console.log(mapCurrentIds)
 
+            // Creates an array of all the quest ids in the database to compare against
             const allQuestIDsArray = this.props.name 
                 ?   this.props.allQuestData.map(quest => {
                         return quest._id
                     })
                 :   null
             
+            // Compares the quest ids of the quests the player is current using to all the quest ids
             const compareAllToClaimed = this.props.name
                 ?   allQuestIDsArray.map(quest => {
                         let isUnique = true
                         for(let i = 0; i < userQuestsArray.length; i++){
-                            quest === userQuestsArray[i]
-                                ? isUnique = false 
-                                : isUnique = isUnique
+                            if(quest === userQuestsArray[i]){
+                                isUnique = false
+                            }
                         }
                         if(isUnique){
                             return quest
@@ -99,6 +114,7 @@ class Quests extends Component {
                     })
                 :   null
 
+            // Removes the undefined data points created in the above method
             const removeUndefinedResults = this.props.name
                 ?   compareAllToClaimed.filter(quest => {
                         if(quest !== undefined){
@@ -107,6 +123,7 @@ class Quests extends Component {
                     })
                 :   null
 
+            // Maps the quest details of all the quests for the New Quests tab
             const pendingQuestsArray = []
             const populatePendingData = this.props.name
                 ?   this.props.allQuestData.map(quest => {
@@ -133,7 +150,6 @@ class Quests extends Component {
                 completedDisplayedQuests: this.props.detailedQuestLog,
                 currentDisplayedQuests: this.props.detailedQuestCurrent,
                 pendingDisplayedQuests: pendingQuestsArray,
-                allQuestData: this.props.allQuestData
             })
         }
 
@@ -141,8 +157,6 @@ class Quests extends Component {
 
     //---RENDER-------------------------------//
         render(){
-            console.log(this.state)
-            // console.log(this.props.pendingQuestsList)
             return (
                 <div className="quests-container">
                     <div className="quest-library-toggle">
@@ -153,7 +167,6 @@ class Quests extends Component {
                                 pendingQuests={this.state.pendingDisplayedQuests}
                             />
                         </div>
-                        {/* {this.state.toggle1 ? <QuestLibrary toggler={this.toggler1} {...this.state} toggled={this.state.toggle1}/> : null }   */}
                     </div>
                     <div className="current-quests-toggle">
                         <h2 onClick={this.toggler2} >Current Quests</h2>
@@ -163,7 +176,6 @@ class Quests extends Component {
                                 currentQuests={this.state.currentDisplayedQuests}
                             />
                         </div>
-                        {/* {this.state.toggle2 ? <CurrentQuests toggler={this.toggler2} {...this.state} toggled={this.state.toggle2}/> : <div></div>} */}
                     </div>
                     <div className="completed-quests-toggle">
                         <h2 onClick={this.toggler3} >Completed Quests</h2>
@@ -173,7 +185,6 @@ class Quests extends Component {
                                 completedQuests={this.state.completedDisplayedQuests}
                             />
                         </div>
-                        {/* {this.state.toggle3 ? <CompletedQuests toggler={this.toggler3} {...this.state} toggled={this.state.toggle3}/> : <div></div>} */}
                     </div>
                 </div>
             )

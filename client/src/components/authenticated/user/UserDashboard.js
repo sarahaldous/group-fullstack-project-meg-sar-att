@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import axios from "axios"
 
 //COMPONENTS
 import PlayerLvl from "./PlayerLvl.js"
@@ -11,7 +10,7 @@ import {withPlayer} from "../../../context/PlayerProvider";
 class UserDashboard extends Component {
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <section className="user-dashboard-container">
                 <div className="avatar-image-container" style={{backgroundImage:`url(${this.props.avatar})`}}>

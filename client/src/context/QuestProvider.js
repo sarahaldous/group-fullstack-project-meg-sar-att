@@ -72,7 +72,6 @@ class QuestProvider extends Component {
     getAllQuestData = () =>{
         const allQuests = []
         axios.get("/quests").then(res =>{
-            // console.log(res.data)
             const mappedAllQuests = res.data.map((quest, i) => {
                 const mappedSingleQuest = {
                     key: i,
@@ -87,7 +86,9 @@ class QuestProvider extends Component {
                     _id: quest._id
                 }
                 allQuests.push(mappedSingleQuest)
+                return mappedSingleQuest
             })
+            console.log(mappedAllQuests)
             console.log(allQuests)
             this.setState({
                 allQuestData: allQuests

@@ -38,8 +38,6 @@ class HomeDashboard extends Component {
     }
 
     render(){
-        console.log(this.props)
-        //Update to autopopulate player name
         return (
             <section className="home-dashboard">
                 <h5>{this.state.greeting}, {this.props.name}</h5>

@@ -10,7 +10,7 @@ import Quest from "../authenticated/quests/Quests.js"
 class AdminDashboard extends Component {
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div className={"admin-dashboard-container"}>
                 <div className={"adminQuery"}>

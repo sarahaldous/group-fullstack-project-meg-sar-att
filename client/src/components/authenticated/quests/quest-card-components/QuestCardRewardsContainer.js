@@ -30,8 +30,7 @@ class QuestCardRewardsContainer extends Component {
                 case "grandmaster":
                     return grandMasterIcon
                 default: 
-                    // return ""
-                    return console.log("Warning: Failed to identify mastery lvl.")
+                    return ""
             }
         }
 
@@ -55,8 +54,7 @@ class QuestCardRewardsContainer extends Component {
                     case "goingPlaces":
                         return transportationIcon
                     default: 
-                        // return ""
-                        return console.log("Warning: Failed to identify quest categories.")
+                        return ""
                 }
             }
         }

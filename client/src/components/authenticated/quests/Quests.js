@@ -17,9 +17,9 @@ class Quests extends Component {
             toggle1: false,
             toggle2: true,
             toggle3: false,
-            completedQuests: [],
-            currentQuests: [],
-            pendingQuests: [],
+            completedDisplayedQuests: [],
+            currentDisplayedQuests: [],
+            pendingDisplayedQuests: [],
             allQuestData: []
         }
     }
@@ -63,123 +63,86 @@ class Quests extends Component {
         }
 
     //---DATA--------------------------------//
-    async componentDidMount(){
-            // console.log(this.props)
-            const getAllQuestData = () => {
-                axios.get("/quests").then(res => {
-                    const questData = res.data
+        componentDidMount(){
 
-                    const tempCompleteUserQuests = this.props.questLog
-                    const tempCurrentUserQuests = this.props.questCurrent
+            const dataStatus = this.props.name
+                ?   "Player data acquired!"
+                :   "Awaiting player data, please wait..."
+            
+            console.log(dataStatus)
 
-                    this.setState({
-                        allQuestData: questData,
-                        currentQuests: tempCurrentUserQuests,
-                        completedQuests: tempCompleteUserQuests
-                    },() => {
-                        
-                        const allQuestData = this.state.allQuestData
-                        // console.log("Axios request complete. Quest data ready for sorting.")
+            const userQuestsArray = []
+            const mapCompleteIds = this.props.questLog.map(quest => {
+                userQuestsArray.push(quest)
+            })
+            const mapCurrentIds = this.props.questCurrent.map(quest => {
+                userQuestsArray.push(quest)
+            })
 
-                        //Populating Complete Quest Array
-                        const completeArray = []
-                        const completeArrayMap = allQuestData.filter((quest, i) => {
-                            for(let j=0; j < this.state.completedQuests.length; j++){
-                                if(this.state.completedQuests[j] === quest._id){
-                                    const grabbedQuest = {
-                                        key: i,
-                                        title: quest.title,
-                                        description: quest.description,
-                                        category: quest.category,
-                                        youtubeEmbed: quest.youtubeEmbed,
-                                        recommendedMLvl: quest.recommendedMLvl,
-                                        xp: quest.xp,
-                                        sp: quest.sp,
-                                        _id: quest._id
-                                    }
-                                    completeArray.push(grabbedQuest)
-                                }
-                            }
-                        })
-
-                        // Populating Current Quest Array
-                        const currentArray = []
-                        const currentArrayMap = allQuestData.filter((quest, i) => {
-                            for(let j=0; j < this.state.currentQuests.length; j++){
-                                if(this.state.currentQuests[j] === quest._id){
-                                    const grabbedQuest = {
-                                        key: i,
-                                        title: quest.title,
-                                        summary: quest.summary,
-                                        category: quest.category,
-                                        youtubeEmbed: quest.youtubeEmbed,
-                                        description: quest.description,
-                                        recommendedMLvl: quest.recommendedMLvl,
-                                        xp: quest.xp,
-                                        sp: quest.sp,
-                                        _id: quest._id
-                                    }
-                                    currentArray.push(grabbedQuest)
-                                }
-                            }
-                        })
-
-                        // Populating un-attempted quests
-                        const pendingArray = []
-                        const pendingArrayMap = () => {
-                            const claimedQuests = [...this.state.completedQuests, ...this.state.currentQuests]
-                            const pendingIdArrayMap = allQuestData.map((quest, i) => {
-                                return quest._id
-                            })
-                            const mapClaimedOut = pendingIdArrayMap.map(questID => {
-                            let isUnique = true
-                            for(let j = 0; j < claimedQuests.length; j++){
-                                questID === claimedQuests[j] ? isUnique = false : isUnique = isUnique
-                            }
-                            if(isUnique){
-                                return questID
-                            }
-                            })
-                            const sortClaimedOut = mapClaimedOut.filter(questID => {
-                                if(questID !== undefined){
-                                    return questID
-                                }
-                            })
-                            const pendingArrayMap = allQuestData.map((quest, i) => {
-                                for(let i=0; i < sortClaimedOut.length; i++){
-                                    if(sortClaimedOut[i] === quest._id){
-                                        const grabbedQuest = {
-                                            key: i,
-                                            title: quest.title,
-                                            summary: quest.summary,
-                                            category: quest.category,
-                                            youtubeEmbed: quest.youtubeEmbed,
-                                            description: quest.description,
-                                            recommendedMLvl: quest.recommendedMLvl,
-                                            xp: quest.xp,
-                                            sp: quest.sp,
-                                            _id: quest._id
-                                        }
-                                        pendingArray.push(grabbedQuest)
-                                    }
-                                }
-                            })
-                        }
-
-                        this.setState({
-                            completedQuests: completeArray,
-                            currentQuests: currentArray,
-                            pendingQuests: pendingArray
-                        })
+            const allQuestIDsArray = this.props.name 
+                ?   this.props.allQuestData.map(quest => {
+                        return quest._id
                     })
-                    
-                })
-            }
-            await getAllQuestData()
+                :   null
+            
+            const compareAllToClaimed = this.props.name
+                ?   allQuestIDsArray.map(quest => {
+                        let isUnique = true
+                        for(let i = 0; i < userQuestsArray.length; i++){
+                            quest === userQuestsArray[i]
+                                ? isUnique = false 
+                                : isUnique = isUnique
+                        }
+                        if(isUnique){
+                            return quest
+                        }
+                    })
+                :   null
+
+            const removeUndefinedResults = this.props.name
+                ?   compareAllToClaimed.filter(quest => {
+                        if(quest !== undefined){
+                            return quest
+                        }
+                    })
+                :   null
+
+            const pendingQuestsArray = []
+            const populatePendingData = this.props.name
+                ?   this.props.allQuestData.map(quest => {
+                        for(let i=0; i < removeUndefinedResults.length; i++){
+                            if(removeUndefinedResults[i] === quest._id){
+                                const grabbedQuest = {
+                                    title: quest.title,
+                                    summary: quest.summary,
+                                    category: quest.category,
+                                    youtubeEmbed: quest.youtubeEmbed,
+                                    description: quest.description,
+                                    recommendedMLvl: quest.recommendedMLvl,
+                                    xp: quest.xp,
+                                    sp: quest.sp,
+                                    _id: quest._id
+                                }
+                                pendingQuestsArray.push(grabbedQuest)
+                            }
+                        }
+                    })
+                :   null
+
+            this.setState({
+                completedDisplayedQuests: this.props.detailedQuestLog,
+                currentDisplayedQuests: this.props.detailedQuestCurrent,
+                pendingDisplayedQuests: pendingQuestsArray,
+                allQuestData: this.props.allQuestData
+            })
         }
+
+
 
     //---RENDER-------------------------------//
         render(){
+            console.log(this.state)
+            // console.log(this.props.pendingQuestsList)
             return (
                 <div className="quests-container">
                     <div className="quest-library-toggle">
@@ -187,7 +150,7 @@ class Quests extends Component {
                         <div className="transition" style={this.state.toggle1 ? {height: "56.8vh"} : {height: 0}}>
                             <QuestLibrary 
                                 toggled={this.state.toggle1} 
-                                pendingQuests={this.state.pendingQuests}
+                                pendingQuests={this.state.pendingDisplayedQuests}
                             />
                         </div>
                         {/* {this.state.toggle1 ? <QuestLibrary toggler={this.toggler1} {...this.state} toggled={this.state.toggle1}/> : null }   */}
@@ -197,7 +160,7 @@ class Quests extends Component {
                         <div className="transition" style={this.state.toggle2 ? {height: "56.8vh"} : {height: 0}}>
                             <CurrentQuests 
                                 toggled={this.state.toggle2}
-                                currentQuests={this.state.currentQuests}
+                                currentQuests={this.state.currentDisplayedQuests}
                             />
                         </div>
                         {/* {this.state.toggle2 ? <CurrentQuests toggler={this.toggler2} {...this.state} toggled={this.state.toggle2}/> : <div></div>} */}
@@ -207,7 +170,7 @@ class Quests extends Component {
                         <div className="transition" style={this.state.toggle3 ? {height: "56.8vh"} : {height: 0}}>
                             <CompletedQuests 
                                 toggled={this.state.toggle3}
-                                completedQuests={this.state.completedQuests}
+                                completedQuests={this.state.completedDisplayedQuests}
                             />
                         </div>
                         {/* {this.state.toggle3 ? <CompletedQuests toggler={this.toggler3} {...this.state} toggled={this.state.toggle3}/> : <div></div>} */}

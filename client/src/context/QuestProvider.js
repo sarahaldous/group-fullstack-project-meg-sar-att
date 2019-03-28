@@ -7,17 +7,18 @@ class QuestProvider extends Component {
     constructor(props){
         super(props)
         this.state = {
-            title: "",
-            summary: "",
             category: [],
             description: "",
-            youtubeEmbed: "",
             imageUrl: "",
+            quests: [],
             recommendedMLvl: "",
-            xp: 0,
             sp: 0,
+            summary: "",
+            title: "",
             usersCompleted: [],
-            quests: []
+            xp: 0,
+            youtubeEmbed: "",
+            allQuestData: [],
         }
     }
 
@@ -69,10 +70,11 @@ class QuestProvider extends Component {
     }
 
     getAllQuestData = () =>{
+        const allQuests = []
         axios.get("/quests").then(res =>{
             // console.log(res.data)
             const mappedAllQuests = res.data.map((quest, i) => {
-                return {
+                const mappedSingleQuest = {
                     key: i,
                     title: quest.title,
                     summary: quest.summary,
@@ -84,10 +86,11 @@ class QuestProvider extends Component {
                     sp: quest.sp,
                     _id: quest._id
                 }
+                allQuests.push(mappedSingleQuest)
             })
-            console.log(mappedAllQuests)
+            console.log(allQuests)
             this.setState({
-                allQuestData: mappedAllQuests
+                allQuestData: allQuests
             })
         })
     }
@@ -99,6 +102,7 @@ class QuestProvider extends Component {
                 value={{...this.state,
                     handleChange: this.handleChange,
                     handleSubmit: this.handleSubmit,
+                    getQuestData: this.getQuestData,
                     getAllQuestData: this.getAllQuestData
                 }}
             >
